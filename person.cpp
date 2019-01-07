@@ -1,8 +1,8 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Feb 2019
-** Description:     Describe
-**
+** Description:     Person class is a polymorphic class and is the
+**                  base class for Student and Instructor classes.
 **
 **
 *********************************************************************/
