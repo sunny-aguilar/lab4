@@ -6,7 +6,7 @@
 **
 **
 *********************************************************************/
-#ifndef MENU_HPP
-#define MENU_HPP
+#ifndef BUILDING_HPP
+#define BUILDING_HPP
 
 #endif
