@@ -22,7 +22,7 @@ public:
 private:
     std::string name;
     vector<Building> buildings;
-    vector<Person> person;
+    vector<Person *> person;
 
 };
 
