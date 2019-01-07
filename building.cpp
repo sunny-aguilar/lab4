@@ -27,9 +27,11 @@ Building::Building(std::string name, int size, std::string address)
 /*********************************************************************
 ** Description:    returns a new building object
 *********************************************************************/
-//Building Building::addBuilding() {
-//
-//}
+Building Building::addBuilding(std::string name, int size, std::string address) {
+    Building b = new Building(name, size, address);
+
+    return b;
+}
 
 /*********************************************************************
 ** Description:    set building name
