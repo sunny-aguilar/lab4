@@ -13,13 +13,16 @@
 #include "building.hpp"
 #include "person.hpp"
 #include <string>
+#include <vector>
+using std::vector;
 
 class University {
 public:
-
+    University();
 private:
     std::string name;
-    Bui
+    vector<Building> buildings;
+    vector<Person> person;
 
 };
 
