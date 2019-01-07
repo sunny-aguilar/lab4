@@ -12,7 +12,8 @@
 
 class Instructor : public Person {
 public:
-    void do_work();
+    virtual void do_work() override;
+
 private:
     double rating;
 };

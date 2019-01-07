@@ -9,5 +9,5 @@
 #include "instructor.hpp"
 
 void Instructor::do_work() {
-    
+
 }
