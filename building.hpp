@@ -17,9 +17,9 @@ public:
     Building();
     Building(string name, int size, string address);
     Building addBuilding();
-    void setBuildingName(string name) { this->name = name; }
-    void setBuildingSize(int size) { this->size = size; }
-    void setBuildingAddress(::string address) { this->address = address; }
+    void setBuildingName(string name);
+    void setBuildingSize(int size);
+    void setBuildingAddress(string address);
     string getBuildingName();
     int getBuildingSize();
     string getBuildingAddress();
