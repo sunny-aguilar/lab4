@@ -13,8 +13,8 @@
 
 class Person {
 public:
-    void do_work();
-    
+    virtual void do_work();
+
 private:
     std::string name;
     int age;
