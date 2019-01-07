@@ -9,4 +9,11 @@
 #ifndef BUILDING_HPP
 #define BUILDING_HPP
 
+class Building {
+public:
+
+private:
+
+};
+
 #endif

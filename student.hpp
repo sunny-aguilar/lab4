@@ -8,5 +8,10 @@
 *********************************************************************/
 #ifndef STUDENT_HPP
 #define STUDENT_HPP
+#include "person.hpp"
+
+class Student : public Person {
+
+};
 
 #endif

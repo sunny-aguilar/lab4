@@ -8,5 +8,10 @@
 *********************************************************************/
 #ifndef INSTRUCTOR_HPP
 #define INSTRUCTOR_HPP
+#include "person.hpp"
+
+class Instructor : public Person {
+
+};
 
 #endif
