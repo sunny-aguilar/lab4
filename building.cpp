@@ -8,6 +8,7 @@
 *********************************************************************/
 #include "building.hpp"
 #include <string>
+using std::string;
 
 /*********************************************************************
 ** Description:     default constructor that sets building member
@@ -20,15 +21,15 @@ Building::Building() : name{}, size{0}, address{} { }
 **                  variables to values passed in via parameters
 **                  during initialization.
 *********************************************************************/
-Building::Building(std::string name, int size, std::string address)
+Building::Building(string name, int size, string address)
     : name{name}, size{size}, address{address} {
 }
 
 /*********************************************************************
 ** Description:    returns a new building object
 *********************************************************************/
-Building Building::addBuilding(std::string name, int size, std::string address) {
-    Building b = new Building(name, size, address);
+Building*  Building::addBuilding(string name, int size, string address) {
+    Building *b = new Building(name, size, address);
 
     return b;
 }
