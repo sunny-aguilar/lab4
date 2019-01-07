@@ -6,13 +6,9 @@
 **
 **
 *********************************************************************/
-#include <iostream>
-
-int main() {
-    std::cout << "Hello, World!" << std::endl;
+#ifndef UNIVERSITY_HPP
+#define UNIVERSITY_HPP
 
 
 
-
-    return 0;
-}
+#endif
