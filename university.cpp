@@ -7,6 +7,7 @@
 **
 *********************************************************************/
 #include "university.hpp"
+#include "student.hpp"
 
 /*********************************************************************
 ** Description:     constructor that sets name to OSU
@@ -19,7 +20,8 @@ University::University() {
 ** Description:    returns a student object
 *********************************************************************/
 Person *University::addStudent() {
-
+    Person *s = new Student;
+    return s;
 }
 
 /*********************************************************************

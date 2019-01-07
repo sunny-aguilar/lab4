@@ -12,6 +12,6 @@ Building::Building() {
 
 }
 
-Building Building::addBuilding() {
-
-}
+//Building Building::addBuilding() {
+//
+//}

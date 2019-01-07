@@ -7,7 +7,8 @@
 **
 *********************************************************************/
 #include "student.hpp"
+#include <iostream>
 
 void Student::do_work() {
-
+    std::cout << "Doing student work!\n";
 }
