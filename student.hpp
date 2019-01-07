@@ -12,9 +12,9 @@
 
 class Student : public Person {
 public:
-
+    void do_work();
 private:
-
+    double gpa;
 };
 
 #endif

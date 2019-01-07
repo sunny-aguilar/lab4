@@ -12,9 +12,9 @@
 
 class Instructor : public Person {
 public:
-
+    void do_work();
 private:
-
+    double rating;
 };
 
 #endif

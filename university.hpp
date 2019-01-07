@@ -20,6 +20,8 @@ class University {
 public:
     University();
     Person *addStudent();
+    void printBuildingInfo();
+    void printPersonInfo();
 
 private:
     std::string name;

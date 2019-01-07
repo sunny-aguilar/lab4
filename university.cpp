@@ -15,6 +15,23 @@ University::University() {
     name = "Oregon State University";
 }
 
+/*********************************************************************
+** Description:    returns a student object
+*********************************************************************/
 Person *University::addStudent() {
+
+}
+
+/*********************************************************************
+** Description:    prints building info
+*********************************************************************/
+void University::printBuildingInfo() {
+
+}
+
+/*********************************************************************
+** Description:    prints person info
+*********************************************************************/
+void University::printPersonInfo() {
 
 }
