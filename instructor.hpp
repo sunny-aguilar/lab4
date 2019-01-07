@@ -11,6 +11,9 @@
 #include "person.hpp"
 
 class Instructor : public Person {
+public:
+
+private:
 
 };
 

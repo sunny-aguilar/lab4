@@ -11,6 +11,9 @@
 #include "person.hpp"
 
 class Student : public Person {
+public:
+
+private:
 
 };
 
