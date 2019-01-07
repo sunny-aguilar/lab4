@@ -16,6 +16,11 @@ int main() {
     University university;
     Person person;
 
+
+    // test base class pointers to see if polymorphism is working
+    Person *b = new Person;
+    b->do_work();
+
     Person *p = new Student;
     p->do_work();
 
