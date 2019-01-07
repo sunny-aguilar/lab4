@@ -19,6 +19,8 @@ using std::vector;
 class University {
 public:
     University();
+    Person *addStudent();
+
 private:
     std::string name;
     vector<Building> buildings;

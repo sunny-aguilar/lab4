@@ -14,3 +14,7 @@
 University::University() {
     name = "Oregon State University";
 }
+
+Person *University::addStudent() {
+
+}

@@ -7,8 +7,11 @@
 **
 *********************************************************************/
 #include <iostream>
+#include "university.hpp"
 
 int main() {
+
+    University university;
 
 
 

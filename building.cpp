@@ -7,3 +7,11 @@
 **
 *********************************************************************/
 #include "building.hpp"
+
+Building::Building() {
+
+}
+
+Building Building::addBuilding() {
+
+}
