@@ -21,7 +21,9 @@ public:
     University();
     Person *addStudent();
     void printBuildingInfo();
+    void addBuild(string name, int size, string address);
     void printPersonInfo();
+    void getBuilding(int select);
 
 private:
     std::string name;

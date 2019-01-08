@@ -28,9 +28,8 @@ Building::Building(string name, int size, string address)
 /*********************************************************************
 ** Description:    returns a new building object
 *********************************************************************/
-Building*  Building::addBuilding(string name, int size, string address) {
-    Building *b = new Building(name, size, address);
-
+Building Building::addBuilding(string name, int size, string address) {
+    Building b(name, size, address);
     return b;
 }
 

@@ -22,9 +22,13 @@ int main() {
 //    Person person;
 
     // building tests
-    cout << building.getBuildingName() << endl;
-    cout << building.getBuildingSize() << endl;
-    cout << building.getBuildingAddress() << endl;
+//    cout << building.getBuildingName() << endl;
+//    cout << building.getBuildingSize() << endl;
+//    cout << building.getBuildingAddress() << endl;
+    university.addBuild("Aguilar Building", 2000, "4369 Weathervane Way");
+    university.addBuild("Wesley Building", 2017, "4369 Weathervane Way");
+
+
 
 
     // test base class pointers to see if polymorphism is working

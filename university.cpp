@@ -17,6 +17,14 @@ University::University() {
 }
 
 /*********************************************************************
+** Description:    adds a building object to vector
+*********************************************************************/
+void University::addBuild(string name, int size, string address) {
+    Building b;
+    buildings.push_back(b.addBuilding(name, size, address));
+}
+
+/*********************************************************************
 ** Description:    returns a student object
 *********************************************************************/
 Person *University::addStudent() {
@@ -36,4 +44,12 @@ void University::printBuildingInfo() {
 *********************************************************************/
 void University::printPersonInfo() {
 
+}
+
+/*********************************************************************
+** Description:    gets building info with parameter specifying which
+**                 building in the array
+*********************************************************************/
+void getBuilding(int sel) {
+    buildings[sel];
 }
