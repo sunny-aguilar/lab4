@@ -13,6 +13,7 @@ void Menu::menuControl() {
     switch ( validateNumber(1,4) ) {
         case 1:
             buildingMenu();
+
             break;
         case 2:
             personMenu();
@@ -125,4 +126,9 @@ int Menu::validateNumber(int min, int max) {
     } while (tooLong || isNotDigit || notInRange);
 
     return validatedChoice;
+}
+
+
+void Menu::getPrintBuildingInfo() {
+    
 }

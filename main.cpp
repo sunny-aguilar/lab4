@@ -20,11 +20,11 @@ int main() {
     const int MENU_MAX = 4;
 
     University university;
-    university.addTwoBuildings(university);
+    university.addTwoBuildings();
 
     Menu menu;
     menu.menuControl();
-    
+
 
     // building tests show buildings and add buildings
 //    cout << building.getBuildingName() << endl;

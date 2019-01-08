@@ -25,6 +25,8 @@ public:
     void exitMenu();
     int validateNumber(int min, int max);
 
+    void getPrintBuildingInfo();
+
 private:
 
 };

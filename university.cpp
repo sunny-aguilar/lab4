@@ -44,10 +44,10 @@ void University::printBuildingInfo(int val) {
 /*********************************************************************
 ** Description:    adds two building objects inside of university
 *********************************************************************/
-void University::addTwoBuildings(University &obj) {
-    obj.addBuilding("Kelley Engineering Center", 152166,
+void University::addTwoBuildings() {
+    addBuilding("Kelley Engineering Center", 152166,
                     "110 SW PARK TERRACE\nCORVALLIS, OR 97331");
-    obj.addBuilding("Memorial Union Building", 166177,
+    addBuilding("Memorial Union Building", 166177,
                     "2501 SW JEFFERSON WAY\nCORVALLIS, OR 97331");
 }
 
