@@ -77,7 +77,8 @@ void Menu::workMenu() {
 }
 
 void Menu::backToMainMenu() {
-    cout << "Enter 1 to go back to the main menu\n";
+    cout << "1. Enter 1 for Main Menu\n";
+    cout << "2. Enter 2 to Exit Program\n";
     cout << ">> ";
 }
 

@@ -24,9 +24,10 @@ int main() {
     university.addTwoBuildings();
 
     Menu menu;
-    menu.mainMenu();
-    menu.setSelection( menu.validateNumber(1,3) );
+
     do {
+        menu.mainMenu();
+        menu.setSelection( menu.validateNumber(1,3) );
         if (menu.getSelection() == 1) {
             menu.buildingMenu();
             university.printBuildingInfo();
@@ -53,7 +54,7 @@ int main() {
         }
 
     } while (repeatMenu);
-    
+
 
     // building tests show buildings and add buildings
 //    cout << building.getBuildingName() << endl;
