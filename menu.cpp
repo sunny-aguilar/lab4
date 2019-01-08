@@ -131,5 +131,5 @@ int Menu::validateNumber(int min, int max) {
 
 
 void Menu::getPrintBuildingInfo() {
-    
+
 }

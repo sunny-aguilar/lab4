@@ -9,7 +9,6 @@
 #ifndef MENU_HPP
 #define MENU_HPP
 
-#include "university.hpp"
 #include <iostream>
 #include <sstream>
 using std::cin;

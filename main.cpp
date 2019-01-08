@@ -6,11 +6,11 @@
 **
 **
 *********************************************************************/
+#include "menu.hpp"
 #include "university.hpp"
 #include "building.hpp"
 #include "student.hpp"
 #include "instructor.hpp"
-#include "menu.hpp"
 #include <iostream>
 using std::cout;
 using std::endl;
