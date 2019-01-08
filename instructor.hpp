@@ -16,6 +16,8 @@ class Instructor : public Person {
 public:
     Instructor();
     Instructor(double rating);
+    void setRating(double rating);
+    double getRating();
     void do_work();
 
 private:
