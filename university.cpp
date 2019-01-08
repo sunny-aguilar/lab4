@@ -42,6 +42,10 @@ void University::addPersons() {
     addInstructor( generateDouble(5.0), "", generateAge() );
 }
 
+/*********************************************************************
+** Description:     returns a random number from 0 to a max value
+**                  given by the parameter passed in
+*********************************************************************/
 double University::generateDouble(int max) {
     unsigned seed;
     double randomGPA;
@@ -61,6 +65,8 @@ int University::generateAge() {
 }
 
 // WRITE A FUNCTION TO ASK FOR A USER NAME AND ENTER UP ABOVE IN LINE 41 AND 42
+
+
 
 /*********************************************************************
 ** Description:    prints building info
