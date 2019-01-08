@@ -74,6 +74,8 @@ void Menu::personMenu() {
 *********************************************************************/
 void Menu::workMenu() {
     cout << "Choose a person to do work\n";
+    cout << "1. Choose person 1\n";
+    cout << "2. Choose person 2\n";
 }
 
 void Menu::backToMainMenu() {

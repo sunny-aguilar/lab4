@@ -68,6 +68,11 @@ int University::generateAge() {
 
 
 
+Person *University::getPersonPointer(int number) {
+    return person[number];
+}
+
+
 /*********************************************************************
 ** Description:    prints building info
 *********************************************************************/

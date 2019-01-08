@@ -30,6 +30,7 @@ public:
     void addPersons();
     double generateDouble(int max);
     int generateAge();
+    Person *getPersonPointer(int number);
     void printBuildingInfo();
     void addBuilding(string name, int size, string address);
     void addTwoBuildings();

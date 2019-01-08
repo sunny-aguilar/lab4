@@ -62,8 +62,9 @@ int main() {
         }
         else if (menu.getSelection() == 3) {
             menu.workMenu();
+            menu.setSelection( menu.validateNumber(1,2) );
             // ENTER FUNCTION HERE TO SET WORKER
-
+//            university. 
 
 
             menu.setSelection( menu.validateNumber(1,2) );
