@@ -37,7 +37,6 @@ int main() {
                 repeatMenu = true;
             }
             else if (menu.getSelection() == 2) {
-                menu.exitMenu();
                 repeatMenu = false;
             }
         }
@@ -48,7 +47,7 @@ int main() {
 
         }
         else if (menu.getSelection() == 4) {
-
+            repeatMenu = false;
         }
         else {
             cout << "Error processing your menu choice!\n";
