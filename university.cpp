@@ -35,10 +35,14 @@ Person *University::addStudent() {
 /*********************************************************************
 ** Description:    prints building info
 *********************************************************************/
-void University::printBuildingInfo(int val) {
-    cout << buildings[val].getBuildingName() << endl;
-    cout << buildings[val].getBuildingSize() << endl;
-    cout << buildings[val].getBuildingAddress() << endl;
+void University::printBuildingInfo() {
+    cout << "Vector Size" << buildings.size();
+//    for (int val: buildings) {
+//        cout << val << endl;
+//    }
+    cout << buildings[0].getBuildingName() << endl;
+    cout << buildings[0].getBuildingSize() << endl;
+    cout << buildings[0].getBuildingAddress() << endl;
 }
 
 /*********************************************************************

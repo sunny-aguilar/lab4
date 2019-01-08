@@ -9,12 +9,12 @@
 
 #include "menu.hpp"
 
-void Menu::menuControl(University obj) {
+void Menu::menuControl() {
     mainMenu();
     switch ( validateNumber(1,4) ) {
         case 1:
             buildingMenu();
-            getPrintBuildingInfo(obj);
+            getPrintBuildingInfo();
             break;
         case 2:
             personMenu();
@@ -130,6 +130,6 @@ int Menu::validateNumber(int min, int max) {
 }
 
 
-void Menu::getPrintBuildingInfo(University &obj) {
-    obj.printBuildingInfo(1);
+void Menu::getPrintBuildingInfo() {
+    
 }

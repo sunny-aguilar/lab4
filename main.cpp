@@ -23,7 +23,7 @@ int main() {
     university.addTwoBuildings();
 
     Menu menu;
-    menu.menuControl(university);
+    menu.menuControl();
 
 
     // building tests show buildings and add buildings
@@ -32,8 +32,8 @@ int main() {
 //    cout << building.getBuildingAddress() << endl;
     university.addBuilding("Aguilar Building", 2000, "4369 Weathervane Way");
     university.addBuilding("Wesley Building", 2017, "4369 Weathervane Way");
-    university.printBuildingInfo(0);        // prints building name
-    university.printBuildingInfo(1);        // prints building name
+    university.printBuildingInfo();        // prints building name
+    university.printBuildingInfo();        // prints building name
 
 
 

@@ -18,7 +18,7 @@ using std::endl;
 
 class Menu {
 public:
-    void menuControl(University obj);
+    void menuControl();
     void mainMenu();
     void buildingMenu();
     void personMenu();
@@ -26,7 +26,7 @@ public:
     void exitMenu();
     int validateNumber(int min, int max);
 
-    void getPrintBuildingInfo(University &obj);
+    void getPrintBuildingInfo();
 
 private:
 
