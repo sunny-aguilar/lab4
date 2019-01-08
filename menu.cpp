@@ -8,14 +8,22 @@
 *********************************************************************/
 #include "menu.hpp"
 
+/*********************************************************************
+** Description:     displays the main menu
+*********************************************************************/
 void Menu::mainMenu() {
     cout << "OREGON STATE UNIVERSITY INFORMATION SYSTEM\n";
     cout << "1. Print Building Info\n";
     cout << "2. Print Student & Staff Info\n";
     cout << "3. Choose a Person to do Work\n";
     cout << "4. Exit the Program\n";
+    cout << ">> ";
 }
 
+/*********************************************************************
+** Description:     general validator where the parameters are the
+**                  min and max numbers acceptable
+*********************************************************************/
 int Menu::validateNumber(int min, int max) {
     char choice[100];
     int amount = 0;
