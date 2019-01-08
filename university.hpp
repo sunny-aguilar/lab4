@@ -13,6 +13,7 @@
 #include "building.hpp"
 #include "person.hpp"
 #include "student.hpp"
+#include "instructor.hpp"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -23,7 +24,8 @@ using std::endl;
 class University {
 public:
     University();
-    Person *addStudent();
+    void addStudent();
+    void addInstructor();
     void printBuildingInfo();
     void addBuilding(string name, int size, string address);
     void addTwoBuildings();

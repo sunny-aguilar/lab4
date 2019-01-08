@@ -8,6 +8,13 @@
 *********************************************************************/
 #include "person.hpp"
 
+void Person::setName(std::string name) {
+    this->name = name;
+}
+
+void Person::getName() {
+    return name;
+}
 
 void Person::do_work() {
     std::cout << "Doing person work!\n";

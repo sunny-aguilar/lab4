@@ -14,6 +14,8 @@
 
 class Person {
 public:
+    void setName(std::string name);
+    std::string getName();
     virtual void do_work();
 
 private:

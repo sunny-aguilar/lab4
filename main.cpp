@@ -21,7 +21,10 @@ int main() {
     bool repeatMenu = true;
 
     University university;
+    // instantiate two buildings
     university.addTwoBuildings();
+    // instantiate 1 student and 1 instructor
+    university.addStudent();
 
     Menu menu;
 
@@ -44,7 +47,7 @@ int main() {
             menu.personMenu();
             university.printPersonInfo();
             // ENTER FUNCTIONS HERE TO PRINT PERSONS IN UNI CLASS
-
+            // FIRST
 
             menu.backToMainMenu();
             menu.setSelection( menu.validateNumber(1,2) );
@@ -59,7 +62,7 @@ int main() {
             menu.workMenu();
             // ENTER FUNCTION HERE TO SET WORKER
 
-            
+
             menu.setSelection( menu.validateNumber(1,2) );
             if (menu.getSelection() == 1) {
                 repeatMenu = true;
