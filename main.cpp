@@ -19,15 +19,12 @@ int main() {
     const int MENU_MIN = 1;
     const int MENU_MAX = 4;
 
+    University university;
+    university.addTwoBuildings(university);
+
     Menu menu;
     menu.menuControl();
-
-
-
-    University university;
-    Building building("Kelley Engineering Center", 152166,
-                      "110 SW PARK TERRACE\nCORVALLIS, OR 97331");
-//    Person person;
+    
 
     // building tests show buildings and add buildings
 //    cout << building.getBuildingName() << endl;
