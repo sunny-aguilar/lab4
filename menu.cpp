@@ -30,6 +30,20 @@ void Menu::menuControl() {
 }
 
 /*********************************************************************
+** Description:     sets selection member variable
+*********************************************************************/
+void Menu::setSelection(int sel) {
+    selection = sel;
+}
+
+/*********************************************************************
+** Description:     gets selection member variable
+*********************************************************************/
+int Menu::getSelection() {
+    return selection;
+}
+
+/*********************************************************************
 ** Description:     displays the main menu
 *********************************************************************/
 void Menu::mainMenu() {
@@ -63,7 +77,7 @@ void Menu::workMenu() {
 }
 
 void Menu::backToMainMenu() {
-    cout << "1. Enter 1 to go back to the main menu\n";
+    cout << "Enter 1 to go back to the main menu\n";
     cout << ">> ";
 }
 

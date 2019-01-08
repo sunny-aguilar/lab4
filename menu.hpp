@@ -18,6 +18,8 @@ using std::endl;
 class Menu {
 public:
     void menuControl();
+    void setSelection(int sel);
+    int getSelection();
     void mainMenu();
     void buildingMenu();
     void personMenu();
@@ -27,7 +29,7 @@ public:
     int validateNumber(int min, int max);
 
 private:
-
+    int selection;
 };
 
 #endif

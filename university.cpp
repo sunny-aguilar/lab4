@@ -40,9 +40,6 @@ void University::printBuildingInfo() {
         cout << val.getBuildingSize() << endl;
         cout << val.getBuildingAddress() << endl << endl;
     }
-//    cout << buildings[0].getBuildingName() << endl;
-//    cout << buildings[0].getBuildingSize() << endl;
-//    cout << buildings[0].getBuildingAddress() << endl;
 }
 
 /*********************************************************************
