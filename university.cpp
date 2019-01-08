@@ -39,10 +39,10 @@ void University::addInstructor(double rating, string name, int age) {
 
 void University::addPersons() {
     addStudent( generateDouble(4.0), "", generateAge() );
-    addInstructor( generateDouble(5.0) );
+    addInstructor( generateDouble(5.0), "", generateAge() );
 }
 
-double University::generateDouble(int max, "", generateAge() ) {
+double University::generateDouble(int max) {
     unsigned seed;
     double randomGPA;
     seed = static_cast<unsigned int>(time(nullptr));
@@ -60,7 +60,7 @@ int University::generateAge() {
     return randomGPA;
 }
 
-
+// WRITE A FUNCTION TO ASK FOR A USER NAME AND ENTER UP ABOVE IN LINE 41 AND 42
 
 /*********************************************************************
 ** Description:    prints building info
