@@ -24,7 +24,7 @@ public:
     University();
     Person *addStudent();
     void printBuildingInfo(int val);
-    void addBuild(string name, int size, string address);
+    void addBuilding(string name, int size, string address);
     void printPersonInfo();
     Building getBuilding(vector<Building> vect, int sel);
 

@@ -8,6 +8,26 @@
 *********************************************************************/
 #include "menu.hpp"
 
+void Menu::menuControl() {
+    mainMenu();
+    switch ( validateNumber(1,4) ) {
+        case 1:
+            buildingMenu();
+            break;
+        case 2:
+            personMenu();
+            break;
+        case 3:
+            workMenu();
+            break;
+        case 4:
+            exitMenu();
+            break;
+        default:
+            cout << "Error processing your menu choice\n";
+    }
+}
+
 /*********************************************************************
 ** Description:     displays the main menu
 *********************************************************************/
@@ -21,12 +41,41 @@ void Menu::mainMenu() {
 }
 
 /*********************************************************************
+** Description:     displays menu to print building info
+*********************************************************************/
+void Menu::buildingMenu() {
+    cout << "Printing all building info\n";
+}
+
+/*********************************************************************
+** Description:     displays menu to print people info
+*********************************************************************/
+void Menu::personMenu() {
+    cout << "Printing all people info\n";
+}
+
+/*********************************************************************
+** Description:     displays menu to chose a person to do work
+*********************************************************************/
+void Menu::workMenu() {
+    cout << "Choose a person to do work\n";
+}
+
+/*********************************************************************
+** Description:     displays the exit program menu
+*********************************************************************/
+void Menu::exitMenu() {
+    cout << "Exiting the program\n";
+}
+
+
+/*********************************************************************
 ** Description:     general validator where the parameters are the
 **                  min and max numbers acceptable
 *********************************************************************/
 int Menu::validateNumber(int min, int max) {
     char choice[100];
-    int amount = 0;
+    int validatedChoice = 0;
     std::stringstream convert;
     bool tooLong = false;
     bool isNotDigit = false;
@@ -65,9 +114,9 @@ int Menu::validateNumber(int min, int max) {
         if (!isNotDigit && !tooLong) {
             convert.clear();
             convert << choice;
-            convert >> amount;
+            convert >> validatedChoice;
 
-            if (amount < min || amount > max) {
+            if (validatedChoice < min || validatedChoice > max) {
                 notInRange = true;
                 cout << "enter a number between "
                      << min << " or " << max << endl;
@@ -75,5 +124,5 @@ int Menu::validateNumber(int min, int max) {
         }
     } while (tooLong || isNotDigit || notInRange);
 
-    return amount;
+    return validatedChoice;
 }

@@ -19,7 +19,7 @@ University::University() {
 /*********************************************************************
 ** Description:    adds a building object to vector
 *********************************************************************/
-void University::addBuild(string name, int size, string address) {
+void University::addBuilding(string name, int size, string address) {
     Building b;
     buildings.push_back(b.createBuilding(name, size, address));
 }

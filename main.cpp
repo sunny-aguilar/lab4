@@ -20,8 +20,8 @@ int main() {
     const int MENU_MAX = 4;
 
     Menu menu;
-    menu.mainMenu();
-    menu.validateNumber(MENU_MIN, MENU_MAX);
+    menu.menuControl();
+
 
 
     University university;
@@ -33,8 +33,8 @@ int main() {
 //    cout << building.getBuildingName() << endl;
 //    cout << building.getBuildingSize() << endl;
 //    cout << building.getBuildingAddress() << endl;
-    university.addBuild("Aguilar Building", 2000, "4369 Weathervane Way");
-    university.addBuild("Wesley Building", 2017, "4369 Weathervane Way");
+    university.addBuilding("Aguilar Building", 2000, "4369 Weathervane Way");
+    university.addBuilding("Wesley Building", 2017, "4369 Weathervane Way");
     university.printBuildingInfo(0);        // prints building name
     university.printBuildingInfo(1);        // prints building name
 

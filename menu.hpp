@@ -17,7 +17,12 @@ using std::endl;
 
 class Menu {
 public:
+    void menuControl();
     void mainMenu();
+    void buildingMenu();
+    void personMenu();
+    void workMenu();
+    void exitMenu();
     int validateNumber(int min, int max);
 
 private:
