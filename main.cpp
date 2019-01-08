@@ -27,7 +27,7 @@ int main() {
 
     do {
         menu.mainMenu();
-        menu.setSelection( menu.validateNumber(1,3) );
+        menu.setSelection( menu.validateNumber(1,4) );
         if (menu.getSelection() == 1) {
             menu.buildingMenu();
             university.printBuildingInfo();
@@ -37,6 +37,7 @@ int main() {
                 repeatMenu = true;
             }
             else if (menu.getSelection() == 2) {
+                menu.exitMenu();
                 repeatMenu = false;
             }
         }
@@ -77,7 +78,7 @@ int main() {
     Person *pp = new Instructor;
     pp->do_work();
 
-
+    menu.exitMenu();
 
     return 0;
 }
