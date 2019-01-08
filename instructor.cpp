@@ -10,7 +10,9 @@
 
 Instructor::Instructor() : rating{} { }
 
-Instructor::Instructor(double rating) : rating{rating} { }
+Instructor::Instructor(double rating, string name, int age)
+    : rating{rating}, Person{name, age} {
+}
 
 void Instructor::setRating(double rating) {
     this->rating = rating;

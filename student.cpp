@@ -11,7 +11,9 @@
 
 Student::Student() : gpa{0.0} { }
 
-Student::Student(double gpa) : gpa{gpa} { }
+Student::Student(double gpa, string name, int age)
+    : gpa{gpa}, Person{name, age} {
+}
 
 void Student::setGPA(double gpa) {
     this->gpa = gpa;

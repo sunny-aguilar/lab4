@@ -47,7 +47,7 @@ double University::generateDouble(int max) {
     double randomGPA;
     seed = static_cast<unsigned int>(time(nullptr));
     srand(seed);
-    randomGPA = rand() % 4 + 1;
+    randomGPA = rand() % max + 1;
     return randomGPA;
 }
 
