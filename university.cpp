@@ -21,7 +21,7 @@ University::University() {
 *********************************************************************/
 void University::addBuild(string name, int size, string address) {
     Building b;
-    buildings.push_back(b.addBuilding(name, size, address));
+    buildings.push_back(b.createBuilding(name, size, address));
 }
 
 /*********************************************************************
@@ -35,8 +35,10 @@ Person *University::addStudent() {
 /*********************************************************************
 ** Description:    prints building info
 *********************************************************************/
-void University::printBuildingInfo() {
-
+void University::printBuildingInfo(int val) {
+    cout << buildings[val].getBuildingName() << endl;
+    cout << buildings[val].getBuildingSize() << endl;
+    cout << buildings[val].getBuildingAddress() << endl;
 }
 
 /*********************************************************************
@@ -50,6 +52,6 @@ void University::printPersonInfo() {
 ** Description:    gets building info with parameter specifying which
 **                 building in the array
 *********************************************************************/
-void getBuilding(int sel) {
-    buildings[sel];
+Building University::getBuilding(vector<Building> vect, int sel) {
+    return buildings[sel];
 }

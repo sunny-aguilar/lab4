@@ -12,18 +12,21 @@
 #include "university.hpp"
 #include "building.hpp"
 #include "person.hpp"
+#include <iostream>
 #include <string>
 #include <vector>
 using std::vector;
+using std::cout;
+using std::endl;
 
 class University {
 public:
     University();
     Person *addStudent();
-    void printBuildingInfo();
+    void printBuildingInfo(int val);
     void addBuild(string name, int size, string address);
     void printPersonInfo();
-    void getBuilding(int select);
+    Building getBuilding(vector<Building> vect, int sel);
 
 private:
     std::string name;

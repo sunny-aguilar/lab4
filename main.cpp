@@ -10,24 +10,29 @@
 #include "building.hpp"
 #include "student.hpp"
 #include "instructor.hpp"
+#include "menu.hpp"
 #include <iostream>
 using std::cout;
 using std::endl;
 
 int main() {
+    Menu menu;
+    menu.mainMenu();
+
 
     University university;
     Building building("Kelley Engineering Center", 152166,
                       "110 SW PARK TERRACE\nCORVALLIS, OR 97331");
 //    Person person;
 
-    // building tests
+    // building tests show buildings and add buildings
 //    cout << building.getBuildingName() << endl;
 //    cout << building.getBuildingSize() << endl;
 //    cout << building.getBuildingAddress() << endl;
     university.addBuild("Aguilar Building", 2000, "4369 Weathervane Way");
     university.addBuild("Wesley Building", 2017, "4369 Weathervane Way");
-
+    university.printBuildingInfo(0);        // prints building name
+    university.printBuildingInfo(1);        // prints building name
 
 
 

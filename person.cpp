@@ -7,7 +7,7 @@
 **
 *********************************************************************/
 #include "person.hpp"
-#include <iostream>
+
 
 void Person::do_work() {
     std::cout << "Doing person work!\n";
