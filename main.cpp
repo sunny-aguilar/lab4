@@ -21,7 +21,7 @@ int main() {
 
     Menu menu;
     menu.mainMenu();
-    menu.validateNumber(1,3);
+    menu.validateNumber(MENU_MIN, MENU_MAX);
 
 
     University university;
