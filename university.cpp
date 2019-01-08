@@ -38,20 +38,18 @@ void University::addInstructor(double rating) {
 }
 
 void University::addPersons() {
-    addStudent();
-    addInstructor();
+    addStudent( generateDouble(4.0) );
+    addInstructor( generateDouble(5.0) );
 }
 
-double University::generateGPA() {
+double University::generateDouble(int max) {
     unsigned seed;
     double randomGPA;
     seed = static_cast<unsigned int>(time(nullptr));
     srand(seed);
-    randomGPA = rand() % 4;
-    cout << "GPA " << randomGPA << endl;
+    randomGPA = rand() % 4 + 1;
     return randomGPA;
 }
-
 
 
 

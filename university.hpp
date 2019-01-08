@@ -28,7 +28,7 @@ public:
     void addStudent(double gpa);
     void addInstructor(double rating);
     void addPersons();
-    double generateGPA();
+    double generateDouble(int max);
     void printBuildingInfo();
     void addBuilding(string name, int size, string address);
     void addTwoBuildings();
