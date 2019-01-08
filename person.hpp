@@ -11,11 +11,16 @@
 
 #include <iostream>
 #include <string>
+using std::string;
 
 class Person {
 public:
-    void setName(std::string name);
-    std::string getName();
+    Person();
+    Person(string name, int age);
+    void setName(string name);
+    string getName();
+    void setAge(int age);
+    int getAge();
     virtual void do_work();
 
 private:
