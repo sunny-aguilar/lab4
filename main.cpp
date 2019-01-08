@@ -56,17 +56,6 @@ int main() {
     } while (repeatMenu);
 
 
-    // building tests show buildings and add buildings
-//    cout << building.getBuildingName() << endl;
-//    cout << building.getBuildingSize() << endl;
-//    cout << building.getBuildingAddress() << endl;
-//    university.addBuilding("Aguilar Building", 2000, "4369 Weathervane Way");
-//    university.addBuilding("Wesley Building", 2017, "4369 Weathervane Way");
-//    university.printBuildingInfo();        // prints building name
-//    university.printBuildingInfo();        // prints building name
-
-
-
     // test base class pointers to see if polymorphism is working
     Person *b = new Person;
     b->do_work();
