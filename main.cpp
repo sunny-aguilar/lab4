@@ -27,7 +27,7 @@ int main() {
 
     do {
         menu.mainMenu();
-        menu.setSelection( menu.validateNumber(1,4) );
+        menu.setSelection( menu.validateNumber(MENU_MIN, MENU_MAX) );
         if (menu.getSelection() == 1) {
             menu.buildingMenu();
             university.printBuildingInfo();
@@ -41,10 +41,32 @@ int main() {
             }
         }
         else if (menu.getSelection() == 2) {
+            menu.personMenu();
+            university.printPersonInfo();
+            // ENTER FUNCTIONS HERE TO PRINT PERSONS IN UNI CLASS
 
+
+            menu.backToMainMenu();
+            menu.setSelection( menu.validateNumber(1,2) );
+            if (menu.getSelection() == 1) {
+                repeatMenu = true;
+            }
+            else if (menu.getSelection() == 2) {
+                repeatMenu = false;
+            }
         }
         else if (menu.getSelection() == 3) {
+            menu.workMenu();
+            // ENTER FUNCTION HERE TO SET WORKER
 
+            
+            menu.setSelection( menu.validateNumber(1,2) );
+            if (menu.getSelection() == 1) {
+                repeatMenu = true;
+            }
+            else if (menu.getSelection() == 2) {
+                repeatMenu = false;
+            }
         }
         else if (menu.getSelection() == 4) {
             repeatMenu = false;
