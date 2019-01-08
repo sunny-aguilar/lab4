@@ -23,17 +23,42 @@ int main() {
     university.addTwoBuildings();
 
     Menu menu;
-    menu.menuControl();
+    menu.mainMenu();
+    
+    do {
+        bool repeat = true;
+        switch ( menu.validateNumber(1,4) ) {
+            case 1:
+                menu.buildingMenu();
+                university.printBuildingInfo();
+                menu.backToMainMenu();
+                menu.validateNumber(1,1);
+                break;
+            case 2:
+                menu.personMenu();
+                break;
+            case 3:
+                menu.workMenu();
+                break;
+            case 4:
+                menu.exitMenu();
+                break;
+            default:
+                cout << "Error processing your menu choice\n";
+        }
+
+    } while (repeat);
+
 
 
     // building tests show buildings and add buildings
 //    cout << building.getBuildingName() << endl;
 //    cout << building.getBuildingSize() << endl;
 //    cout << building.getBuildingAddress() << endl;
-    university.addBuilding("Aguilar Building", 2000, "4369 Weathervane Way");
-    university.addBuilding("Wesley Building", 2017, "4369 Weathervane Way");
-    university.printBuildingInfo();        // prints building name
-    university.printBuildingInfo();        // prints building name
+//    university.addBuilding("Aguilar Building", 2000, "4369 Weathervane Way");
+//    university.addBuilding("Wesley Building", 2017, "4369 Weathervane Way");
+//    university.printBuildingInfo();        // prints building name
+//    university.printBuildingInfo();        // prints building name
 
 
 

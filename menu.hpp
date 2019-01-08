@@ -22,10 +22,9 @@ public:
     void buildingMenu();
     void personMenu();
     void workMenu();
+    void backToMainMenu();
     void exitMenu();
     int validateNumber(int min, int max);
-
-    void getPrintBuildingInfo();
 
 private:
 

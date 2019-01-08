@@ -12,6 +12,7 @@
 #include "menu.hpp"
 #include "building.hpp"
 #include "person.hpp"
+#include "student.hpp"
 #include <iostream>
 #include <string>
 #include <vector>

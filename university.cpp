@@ -7,7 +7,6 @@
 **
 *********************************************************************/
 #include "university.hpp"
-#include "student.hpp"
 
 /*********************************************************************
 ** Description:     constructor that sets name to OSU
@@ -36,13 +35,14 @@ Person *University::addStudent() {
 ** Description:    prints building info
 *********************************************************************/
 void University::printBuildingInfo() {
-    cout << "Vector Size" << buildings.size();
-//    for (int val: buildings) {
-//        cout << val << endl;
-//    }
-    cout << buildings[0].getBuildingName() << endl;
-    cout << buildings[0].getBuildingSize() << endl;
-    cout << buildings[0].getBuildingAddress() << endl;
+    for (Building val: buildings) {
+        cout << val.getBuildingName() << endl;
+        cout << val.getBuildingSize() << endl;
+        cout << val.getBuildingAddress() << endl << endl;
+    }
+//    cout << buildings[0].getBuildingName() << endl;
+//    cout << buildings[0].getBuildingSize() << endl;
+//    cout << buildings[0].getBuildingAddress() << endl;
 }
 
 /*********************************************************************

@@ -10,24 +10,23 @@
 #include "menu.hpp"
 
 void Menu::menuControl() {
-    mainMenu();
-    switch ( validateNumber(1,4) ) {
-        case 1:
-            buildingMenu();
-            getPrintBuildingInfo();
-            break;
-        case 2:
-            personMenu();
-            break;
-        case 3:
-            workMenu();
-            break;
-        case 4:
-            exitMenu();
-            break;
-        default:
-            cout << "Error processing your menu choice\n";
-    }
+//    mainMenu();
+//    switch ( validateNumber(1,4) ) {
+//        case 1:
+//            buildingMenu();
+//            break;
+//        case 2:
+//            personMenu();
+//            break;
+//        case 3:
+//            workMenu();
+//            break;
+//        case 4:
+//            exitMenu();
+//            break;
+//        default:
+//            cout << "Error processing your menu choice\n";
+//    }
 }
 
 /*********************************************************************
@@ -46,7 +45,7 @@ void Menu::mainMenu() {
 ** Description:     displays menu to print building info
 *********************************************************************/
 void Menu::buildingMenu() {
-    cout << "Printing all building info\n";
+    cout << "\n- Printing building info -\n";
 }
 
 /*********************************************************************
@@ -63,13 +62,17 @@ void Menu::workMenu() {
     cout << "Choose a person to do work\n";
 }
 
+void Menu::backToMainMenu() {
+    cout << "1. Enter 1 to go back to the main menu\n";
+    cout << ">> ";
+}
+
 /*********************************************************************
 ** Description:     displays the exit program menu
 *********************************************************************/
 void Menu::exitMenu() {
     cout << "Exiting the program\n";
 }
-
 
 /*********************************************************************
 ** Description:     general validator where the parameters are the
@@ -129,7 +132,3 @@ int Menu::validateNumber(int min, int max) {
     return validatedChoice;
 }
 
-
-void Menu::getPrintBuildingInfo() {
-
-}
