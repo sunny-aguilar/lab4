@@ -42,6 +42,19 @@ void University::addPersons() {
     addInstructor();
 }
 
+double University::generateGPA() {
+    unsigned seed;
+    double randomGPA;
+    seed = static_cast<unsigned int>(time(nullptr));
+    srand(seed);
+    randomGPA = rand() % 4;
+    cout << "GPA " << randomGPA << endl;
+    return randomGPA;
+}
+
+
+
+
 /*********************************************************************
 ** Description:    prints building info
 *********************************************************************/

@@ -49,6 +49,7 @@ int main() {
             university.printPersonInfo();
             // ENTER FUNCTIONS HERE TO PRINT PERSONS IN UNI CLASS
             // FIRST
+            university.generateGPA();
 
             menu.backToMainMenu();
             menu.setSelection( menu.validateNumber(1,2) );

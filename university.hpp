@@ -17,6 +17,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <ctime>
 using std::vector;
 using std::cout;
 using std::endl;
@@ -27,6 +28,7 @@ public:
     void addStudent(double gpa);
     void addInstructor(double rating);
     void addPersons();
+    double generateGPA();
     void printBuildingInfo();
     void addBuilding(string name, int size, string address);
     void addTwoBuildings();
