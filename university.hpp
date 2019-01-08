@@ -28,6 +28,7 @@ public:
     void addTwoBuildings();
     void printPersonInfo();
     Building getBuilding(vector<Building> vect, int sel);
+    friend Menu::getPrintBuildingInfo();
 
 private:
     std::string name;

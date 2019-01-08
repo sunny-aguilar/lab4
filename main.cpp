@@ -23,7 +23,7 @@ int main() {
     university.addTwoBuildings();
 
     Menu menu;
-    menu.menuControl();
+    menu.menuControl(university);
 
 
     // building tests show buildings and add buildings

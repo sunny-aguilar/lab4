@@ -9,6 +9,7 @@
 #ifndef MENU_HPP
 #define MENU_HPP
 
+#include "university.hpp"
 #include <iostream>
 #include <sstream>
 using std::cin;
@@ -17,7 +18,7 @@ using std::endl;
 
 class Menu {
 public:
-    void menuControl();
+    void menuControl(University obj);
     void mainMenu();
     void buildingMenu();
     void personMenu();
@@ -25,7 +26,7 @@ public:
     void exitMenu();
     int validateNumber(int min, int max);
 
-    void getPrintBuildingInfo();
+    void getPrintBuildingInfo(University &obj);
 
 private:
 
