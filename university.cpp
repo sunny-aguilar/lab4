@@ -38,13 +38,14 @@ void University::addInstructor(double rating, string name, int age) {
 }
 
 void University::addPersons() {
-    addStudent( generateDouble(4.0), "", generateAge() );
-    addInstructor( generateDouble(5.0), "", generateAge() );
+    addStudent( generateDouble(4), "James Jameson", generateAge() );
+    addInstructor( generateDouble(5), "Jill Joy", generateAge() );
 }
 
 /*********************************************************************
 ** Description:     returns a random number from 0 to a max value
-**                  given by the parameter passed in
+**                  given by the parameter passed in; used for getting
+**                  a GPA and or rating.
 *********************************************************************/
 double University::generateDouble(int max) {
     unsigned seed;
@@ -69,6 +70,10 @@ int University::generateAge() {
 
 
 Person *University::getPersonPointer(int number) {
+    cout << "Person Name:  " << person[number]->getName();
+    cout << endl;
+    cout << "Person Age: " << person[number]->getAge();
+    cout << endl;
     return person[number];
 }
 

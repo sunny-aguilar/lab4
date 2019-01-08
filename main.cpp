@@ -49,7 +49,8 @@ int main() {
             university.printPersonInfo();
             // ENTER FUNCTIONS HERE TO PRINT PERSONS IN UNI CLASS
             // FIRST
-
+            university.getPersonPointer(0);
+            university.getPersonPointer(1);
 
             menu.backToMainMenu();
             menu.setSelection( menu.validateNumber(1,2) );
@@ -64,7 +65,7 @@ int main() {
             menu.workMenu();
             menu.setSelection( menu.validateNumber(1,2) );
             // ENTER FUNCTION HERE TO SET WORKER
-//            university. 
+//            university.
 
 
             menu.setSelection( menu.validateNumber(1,2) );
