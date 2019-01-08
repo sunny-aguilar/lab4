@@ -16,8 +16,12 @@ using std::cout;
 using std::endl;
 
 int main() {
+    const int MENU_MIN = 1;
+    const int MENU_MAX = 4;
+
     Menu menu;
     menu.mainMenu();
+    menu.validateNumber(1,3);
 
 
     University university;
