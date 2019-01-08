@@ -24,30 +24,24 @@ int main() {
 
     Menu menu;
     menu.mainMenu();
-    
-    do {
-        bool repeat = true;
-        switch ( menu.validateNumber(1,4) ) {
-            case 1:
-                menu.buildingMenu();
-                university.printBuildingInfo();
-                menu.backToMainMenu();
-                menu.validateNumber(1,1);
-                break;
-            case 2:
-                menu.personMenu();
-                break;
-            case 3:
-                menu.workMenu();
-                break;
-            case 4:
-                menu.exitMenu();
-                break;
-            default:
-                cout << "Error processing your menu choice\n";
-        }
 
-    } while (repeat);
+
+    if (menu.validateNumber(1,4) == 1) {
+        menu.buildingMenu();
+        menu.backToMainMenu();
+    }
+    else if (menu.validateNumber(1,4) == 2) {
+
+    }
+    else if (menu.validateNumber(1,4) == 3) {
+
+    }
+    else if (menu.validateNumber(1,4) == 4) {
+
+    }
+    else {
+        cout << "Error processing your menu choice!\n";
+    }
 
 
 
