@@ -24,7 +24,8 @@ int main() {
     // instantiate two buildings
     university.addTwoBuildings();
     // instantiate 1 student and 1 instructor
-    university.addStudent();
+    university.addPersons();
+
 
     Menu menu;
 

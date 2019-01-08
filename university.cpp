@@ -26,14 +26,20 @@ void University::addBuilding(string name, int size, string address) {
 /*********************************************************************
 ** Description:    returns a student object
 *********************************************************************/
-void University::addStudent() {
-    Person *s = new Student;
+void University::addStudent(double gpa) {
+    Person *s = new Student(gpa);
     person.push_back(s);
 }
 
-void University::addInstructor() {
-    Instructor *i = new Instructor;
+
+void University::addInstructor(double rating) {
+    Instructor *i = new Instructor(rating);
     person.push_back(i);
+}
+
+void University::addPersons() {
+    addStudent();
+    addInstructor();
 }
 
 /*********************************************************************
