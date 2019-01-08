@@ -25,10 +25,11 @@ using std::endl;
 class University {
 public:
     University();
-    void addStudent(double gpa);
-    void addInstructor(double rating);
+    void addStudent(double gpa, string name, int age);
+    void addInstructor(double rating, string name, int age);
     void addPersons();
     double generateDouble(int max);
+    int generateAge();
     void printBuildingInfo();
     void addBuilding(string name, int size, string address);
     void addTwoBuildings();

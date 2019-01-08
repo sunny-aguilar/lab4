@@ -26,28 +26,37 @@ void University::addBuilding(string name, int size, string address) {
 /*********************************************************************
 ** Description:    returns a student object
 *********************************************************************/
-void University::addStudent(double gpa) {
-    Person *s = new Student(gpa);
+void University::addStudent(double gpa, string name, int age) {
+    Person *s = new Student(gpa, name, age);
     person.push_back(s);
 }
 
 
-void University::addInstructor(double rating) {
-    Instructor *i = new Instructor(rating);
+void University::addInstructor(double rating, string name, int age) {
+    Instructor *i = new Instructor(rating, name, age);
     person.push_back(i);
 }
 
 void University::addPersons() {
-    addStudent( generateDouble(4.0) );
+    addStudent( generateDouble(4.0), "", generateAge() );
     addInstructor( generateDouble(5.0) );
 }
 
-double University::generateDouble(int max) {
+double University::generateDouble(int max, "", generateAge() ) {
     unsigned seed;
     double randomGPA;
     seed = static_cast<unsigned int>(time(nullptr));
     srand(seed);
     randomGPA = rand() % max + 1;
+    return randomGPA;
+}
+
+int University::generateAge() {
+    unsigned seed;
+    int randomGPA;
+    seed = static_cast<unsigned int>(time(nullptr));
+    srand(seed);
+    randomGPA = rand() % (70 - 18 + 1) + 18;
     return randomGPA;
 }
 
