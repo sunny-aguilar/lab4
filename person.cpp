@@ -28,6 +28,15 @@ int Person::getAge() {
     return age;
 }
 
+int Person::generateHoursWorked() {
+    unsigned seed;
+    int hours;
+    seed = static_cast<unsigned int>(time(nullptr));
+    srand(seed);
+    hours = rand() % 8 + 1;
+    return hours;
+}
+
 void Person::do_work() {
     std::cout << "Doing person work!\n";
 }

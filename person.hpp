@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <string>
+#include <ctime>
 using std::string;
 
 class Person {
@@ -21,6 +22,7 @@ public:
     string getName();
     void setAge(int age);
     int getAge();
+    int generateHoursWorked();
     virtual void do_work();
     virtual double getGPA();
     virtual double getRating();
