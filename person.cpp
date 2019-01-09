@@ -35,14 +35,24 @@ string Person::getName() {
     return name;
 }
 
+/*********************************************************************
+** Description:    setter function for name data member
+*********************************************************************/
 void Person::setAge(int age) {
     this->age = age;
 }
 
+/*********************************************************************
+** Description:    getter function for name data member
+*********************************************************************/
 int Person::getAge() {
     return age;
 }
 
+/*********************************************************************
+** Description:     generates a random integer from 1 - 8 that
+**                  represents hours worked and returns it
+*********************************************************************/
 int Person::generateHoursWorked() {
     unsigned seed;
     int hours;
@@ -52,15 +62,27 @@ int Person::generateHoursWorked() {
     return hours;
 }
 
+/*********************************************************************
+** Description:     virtual function that changes its behavior
+**                  depending on which object it is called from
+*********************************************************************/
 void Person::do_work() {
     std::cout << "Doing person work!\n";
 }
 
+/*********************************************************************
+** Description:     virtual function that changes its behavior
+**                  depending on which object it is called from
+*********************************************************************/
 double Person::getGPA() {
     std::cout << "Error! Person does not have a GPA\n";
     return 0;
 }
 
+/*********************************************************************
+** Description:     virtual function that changes its behavior
+**                  depending on which object it is called from
+*********************************************************************/
 double Person::getRating() {
     std::cout << "Error! Person doe snot have a Rating\n";
     return 0;
