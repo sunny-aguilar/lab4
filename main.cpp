@@ -87,15 +87,15 @@ int main() {
 
 
     // test base class pointers to see if polymorphism is working
-    Person *b = new Person;
-    b->do_work();
-
-    Person *p = new Student;
-    p->do_work();
-    p->getGPA();
-
-    Person *pp = new Instructor;
-    pp->do_work();
+//    Person *b = new Person;
+//    b->do_work();
+//
+//    Person *p = new Student;
+//    p->do_work();
+//    p->getGPA();
+//
+//    Person *pp = new Instructor;
+//    pp->do_work();
 
     menu.exitMenu();
 
