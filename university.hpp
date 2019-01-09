@@ -5,7 +5,13 @@
 **                  and Building class as private variables. University
 **                  class creates Building and Person objects, manages
 **                  them, and gets the object information for display
-**                  purposes.
+**                  purposes. University class holds the the building
+ *                  objects in a vector of type Building and the
+ *                  Person objects are held as a vector of pointers
+ *                  that point to Person objects. Objects are
+ *                  dynamically created inside the University class
+ *                  and de-allocated using the destructor inside of
+ *                  the University class.
 *********************************************************************/
 #ifndef UNIVERSITY_HPP
 #define UNIVERSITY_HPP

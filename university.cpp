@@ -16,6 +16,10 @@ University::University() {
     name = "Oregon State University";
 }
 
+/*********************************************************************
+** Description:     destructor that de-allocates the vector of
+**                  pointers to Person objects.
+*********************************************************************/
 University::~University() {
     for (auto &val: person) {
         delete val;
