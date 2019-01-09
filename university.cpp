@@ -132,7 +132,10 @@ int University::getTotalPersons() {
 }
 
 /*********************************************************************
-** Description:    display person info
+** Description:     display person info for all people in the Person
+**                  vector. Dynamic cast is used to get the object
+**                  data type being pointed to by the base class
+**                  pointer.
 *********************************************************************/
 void University::displayPerson() {
     for (int x = 0; x < person.size(); x++) {
@@ -151,10 +154,14 @@ void University::displayPerson() {
     }
 }
 
+/*********************************************************************
+** Description:     displays person doing work by taking in a
+**                  parameter that selects the appropriate object
+**                  and then calling the virtual do_work() function
+*********************************************************************/
 void University::displayPersonWorking(int number) {
     getPersonPointer(number)->do_work();
 }
-
 
 /*********************************************************************
 ** Description:    prints building info
