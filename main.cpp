@@ -6,10 +6,10 @@
 **
 **
 *********************************************************************/
-#include "menu.hpp"
 #include "university.hpp"
 #include "building.hpp"
 #include "student.hpp"
+#include "menu.hpp"
 #include "instructor.hpp"
 #include <iostream>
 using std::cout;
@@ -20,13 +20,13 @@ int main() {
     const int MENU_MAX = 4;
     bool repeatMenu = true;
 
+    // instantiate  a university object
     University university;
     // instantiate two buildings
     university.addTwoBuildings();
     // instantiate 1 student and 1 instructor
     university.addPersons();
-
-
+    // instantiate menu object
     Menu menu;
 
     do {
