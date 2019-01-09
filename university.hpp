@@ -38,7 +38,7 @@ public:
     void addInstructor(double rating, string name, int age);
     void addPersons();
     double generateDouble(int max);
-    int generateAge();
+    int generateAge(int selectType);
     Person *getPersonPointer(int number);
     void displayPerson();
     void displayPersonWorking(int number);

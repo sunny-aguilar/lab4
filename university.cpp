@@ -90,13 +90,24 @@ double University::generateDouble(int max) {
 ** Description:     returns a random age from a prepopulated list of
 **                  age groups that is randomly selected and returned
 *********************************************************************/
-int University::generateAge() {
+int University::generateAge(int selectType) {
     unsigned seed;
     int randomNum;
-    int age[] = {18,19,20,21,22,23,33,36,43,46,53,56,63,68,70};
+    int studentAge[] = {18,19,20,21,22,23,24,30,31,32,33,34,35,36,37};
+    int teacherAge[] = {28,30,34,38,30,44,48,50,54,58,60,64,68,70,74};
     seed = static_cast<unsigned int>(time(nullptr));
     srand(seed);
     randomNum = rand() % 14 + 1;
+    switch (selectType) {
+        case 1:
+
+            break;
+        case 2:
+
+            break;
+        default:
+            cout << "Error generating an age\n";
+    }
     return age[randomNum];
 }
 
