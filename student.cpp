@@ -24,5 +24,6 @@ double Student::getGPA() {
 }
 
 void Student::do_work() {
-    std::cout << getName() << " did " << generateHoursWorked() << " hours of homework!\n\n";
+    std::cout << getName() << " did " << generateHoursWorked()
+              << " hours of homework!\n\n";
 }
