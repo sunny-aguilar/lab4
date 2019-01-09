@@ -23,5 +23,5 @@ double Instructor::getRating() {
 }
 
 void Instructor::do_work() {
-    std::cout << "Doing instructor work!\n";
+    std::cout << "Doing instructor work!\n\n";
 }

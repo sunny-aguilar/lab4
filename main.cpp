@@ -57,6 +57,8 @@ int main() {
             }
         }
         else if (menu.getSelection() == 3) {
+            // create an array to hold person names and sent it to
+            // the menu to display names of people to do work
             int totalPersons = university.getTotalPersons();
             vector<string> personNames;
             for (int x = 0; x < university.getTotalPersons(); x++) {
@@ -64,10 +66,7 @@ int main() {
             }
             menu.workMenu(totalPersons, personNames);
             menu.setSelection( menu.validateNumber(1,2) );
-            // ENTER LOGIC HERE
             university.displayPersonWorking( menu.getSelection() - 1 );
-
-
             menu.backToMainMenu();
             menu.setSelection( menu.validateNumber(1,2) );
             if (menu.getSelection() == 1) {

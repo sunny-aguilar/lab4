@@ -24,5 +24,5 @@ double Student::getGPA() {
 }
 
 void Student::do_work() {
-    std::cout << "Doing student work!\n";
+    std::cout << "Doing student work!\n\n";
 }
