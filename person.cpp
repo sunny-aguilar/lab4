@@ -16,16 +16,21 @@
 Person::Person() : name{}, age{0} { }
 
 /*********************************************************************
-** Description:    3-arg constructor that sets the GPA data member as
-**                  well as the inherited member variables from its
-**                  base class. Uses constructor initialization list.
+** Description:     2-arg constructor that sets the data member. Uses
+**                  constructor initialization list.
 *********************************************************************/
 Person::Person(string name, int age) : name{name}, age{age} { }
 
+/*********************************************************************
+** Description:    setter function for name data member
+*********************************************************************/
 void Person::setName(string name) {
     this->name = name;
 }
 
+/*********************************************************************
+** Description:    getter function for name data member
+*********************************************************************/
 string Person::getName() {
     return name;
 }
