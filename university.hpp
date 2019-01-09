@@ -31,10 +31,10 @@ public:
     double generateDouble(int max);
     int generateAge();
     Person *getPersonPointer(int number);
+    void displayPerson();
     void printBuildingInfo();
     void addBuilding(string name, int size, string address);
     void addTwoBuildings();
-    void printPersonInfo();
     Building getBuilding(vector<Building> vect, int sel);
 
 private:

@@ -46,11 +46,8 @@ int main() {
         }
         else if (menu.getSelection() == 2) {
             menu.personMenu();
-            university.printPersonInfo();
-            // ENTER FUNCTIONS HERE TO PRINT PERSONS IN UNI CLASS
-            // FIRST
-            university.getPersonPointer(0);
-            university.getPersonPointer(1);
+            university.displayPerson();
+
 
             menu.backToMainMenu();
             menu.setSelection( menu.validateNumber(1,2) );

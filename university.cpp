@@ -70,12 +70,20 @@ int University::generateAge() {
 
 
 Person *University::getPersonPointer(int number) {
-    cout << "Person Name:  " << person[number]->getName();
-    cout << endl;
-    cout << "Person Age: " << person[number]->getAge();
-    cout << endl;
     return person[number];
 }
+
+/*********************************************************************
+** Description:    display person info
+*********************************************************************/
+void University::displayPerson() {
+    for (int x = 0; x < person.size(); x++) {
+        cout << getPersonPointer(x)->getName() << endl;
+        cout << getPersonPointer(x)->getAge() << endl;
+        getPersonPointer(x)->do_work();
+    }
+}
+
 
 
 /*********************************************************************
@@ -97,13 +105,6 @@ void University::addTwoBuildings() {
                     "110 SW PARK TERRACE\nCORVALLIS, OR 97331");
     addBuilding("Memorial Union Building", 166177,
                     "2501 SW JEFFERSON WAY\nCORVALLIS, OR 97331");
-}
-
-/*********************************************************************
-** Description:    prints person info
-*********************************************************************/
-void University::printPersonInfo() {
-
 }
 
 /*********************************************************************
