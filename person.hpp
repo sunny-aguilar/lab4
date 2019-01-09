@@ -1,10 +1,12 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Feb 2019
-** Description:     Describe
-**
-**
-**
+** Description:     Person class is the base class for the Student
+**                  class and Instructor class. Person class has
+**                  various virtual functions that allow for
+**                  polymorphic behavior. Person class does not have
+**                  any pure virtual functions so it is not an abstract
+**                  class.
 *********************************************************************/
 #ifndef PERSON_HPP
 #define PERSON_HPP

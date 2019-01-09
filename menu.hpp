@@ -1,10 +1,10 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Feb 2019
-** Description:     Describe
-**
-**
-**
+** Description:     Menu class is used to display menus and validate
+**                  user input. This class is not part of a class
+**                  hierarchy but works in conjunction with the
+**                  University class to display the menus as needed.
 *********************************************************************/
 #ifndef MENU_HPP
 #define MENU_HPP
