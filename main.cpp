@@ -63,7 +63,7 @@ int main() {
                 personNames.push_back(university.getPersonPointer(x)->getName());
                 cout << personNames[x] << endl;
             }
-            menu.workMenu(totalPersons);
+            menu.workMenu(totalPersons, personNames);
             menu.setSelection( menu.validateNumber(1,2) );
             // ENTER FUNCTION HERE TO SET WORKER
 //            university.

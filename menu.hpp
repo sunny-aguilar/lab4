@@ -11,9 +11,13 @@
 
 #include <iostream>
 #include <sstream>
+#include <string>
+#include <vector>
 using std::cin;
 using std::cout;
 using std::endl;
+using std::string;
+using std::vector;
 
 class Menu {
 public:
@@ -23,7 +27,7 @@ public:
     void mainMenu();
     void buildingMenu();
     void personMenu();
-    void workMenu(int totalPersons);
+    void workMenu(int totalPersons, vector<string> vect);
     void backToMainMenu();
     void exitMenu();
     int validateNumber(int min, int max);
