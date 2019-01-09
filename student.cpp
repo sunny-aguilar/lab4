@@ -19,7 +19,7 @@ Student::Student() : gpa{0.0} { }
 /*********************************************************************
 ** Description:    3-arg constructor that sets the GPA data member as
 **                  well as the inherited member variables from its
-**                  base class.
+**                  base class. Uses constructor initialization list.
 *********************************************************************/
 Student::Student(double gpa, string name, int age)
     : gpa{gpa}, Person{name, age} {

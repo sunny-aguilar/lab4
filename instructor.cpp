@@ -12,8 +12,16 @@
 *********************************************************************/
 #include "instructor.hpp"
 
-Instructor::Instructor() : rating{} { }
+/*********************************************************************
+** Description:    default constructor that sets the GPA data member
+*********************************************************************/
+Instructor::Instructor() : rating{0.0} { }
 
+/*********************************************************************
+** Description:     3-arg constructor that sets the rating data member
+**                  as well as the inherited member variables from its
+**                  base class. Uses constructor initialization list.
+*********************************************************************/
 Instructor::Instructor(double rating, string name, int age)
     : rating{rating}, Person{name, age} {
 }
