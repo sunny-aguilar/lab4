@@ -33,7 +33,7 @@ void Student::setGPA(double gpa) {
 }
 
 /*********************************************************************
-** Description:    getter functiont that gets the GPA data member
+** Description:    getter function that gets the GPA data member
 *********************************************************************/
 double Student::getGPA() {
     return gpa;
@@ -41,7 +41,8 @@ double Student::getGPA() {
 
 /*********************************************************************
 ** Description:     virtual function that overrides the base class
-**                  function
+**                  function that displays how many hours a student
+**                  studies
 *********************************************************************/
 void Student::do_work() {
     std::cout << getName() << " did " << generateHoursWorked()

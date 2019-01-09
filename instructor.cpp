@@ -18,14 +18,25 @@ Instructor::Instructor(double rating, string name, int age)
     : rating{rating}, Person{name, age} {
 }
 
+/*********************************************************************
+** Description:    setter function for rating data member
+*********************************************************************/
 void Instructor::setRating(double rating) {
     this->rating = rating;
 }
 
+/*********************************************************************
+** Description:    getter function that gets the rating data member
+*********************************************************************/
 double Instructor::getRating() {
     return rating;
 }
 
+/*********************************************************************
+** Description:     virtual function that overrides the base class
+**                  function that displays for how many hours an
+**                  instructor graded paper
+*********************************************************************/
 void Instructor::do_work() {
     std::cout << getName() << " graded papers for "
               << generateHoursWorked() << " hours.\n\n";
