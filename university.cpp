@@ -60,8 +60,8 @@ void University::addInstructor(double rating, string name, int age) {
 ** Description:    adds a student and instructor object when called
 *********************************************************************/
 void University::addPersons() {
-    addStudent( generateDouble(4), "James Jameson", generateAge() );
-    addInstructor( generateDouble(5), "Jill Joy", generateAge() );
+    addStudent( generateDouble(4), "James Jameson", generateAge(1) );
+    addInstructor( generateDouble(5), "Jill Joy", generateAge(2) );
 }
 
 /*********************************************************************
@@ -92,23 +92,24 @@ double University::generateDouble(int max) {
 *********************************************************************/
 int University::generateAge(int selectType) {
     unsigned seed;
-    int randomAge;
+    int randomAge = 0;
+    int randomNum;
     int studentAge[] = {18,19,20,21,22,23,24,30,31,32,33,34,35,36,37};
     int teacherAge[] = {28,30,34,38,30,44,48,50,54,58,60,64,68,70,74};
     seed = static_cast<unsigned int>(time(nullptr));
     srand(seed);
-    randomAge = rand() % 14 + 1;
+    randomNum = rand() % 14 + 1;
     switch (selectType) {
         case 1:
-            randomAge = studentAge[randomAge];
+            randomAge = studentAge[randomNum];
             break;
         case 2:
-            randomAge = studentAge[];
+            randomAge = teacherAge[randomNum];
             break;
         default:
             cout << "Error generating an age\n";
     }
-    return age[randomNum];
+    return randomAge;
 }
 
 // WRITE A FUNCTION TO ASK FOR A USER NAME AND ENTER UP ABOVE IN LINE 41 AND 42
