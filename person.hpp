@@ -30,7 +30,7 @@ public:
     virtual double getRating();
 
 private:
-    std::string name;
+    string name;
     int age;
 };
 

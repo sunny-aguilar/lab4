@@ -10,8 +10,16 @@
 *********************************************************************/
 #include "person.hpp"
 
+/*********************************************************************
+** Description:    default constructor that sets the data members
+*********************************************************************/
 Person::Person() : name{}, age{0} { }
 
+/*********************************************************************
+** Description:    3-arg constructor that sets the GPA data member as
+**                  well as the inherited member variables from its
+**                  base class. Uses constructor initialization list.
+*********************************************************************/
 Person::Person(string name, int age) : name{name}, age{age} { }
 
 void Person::setName(string name) {
