@@ -6,7 +6,6 @@
 **
 **
 *********************************************************************/
-
 #include "menu.hpp"
 
 Menu::Menu() {
@@ -68,15 +67,6 @@ void Menu::backToMainMenu() {
     cout << "2. Enter 2 to Exit Program\n";
     cout << ">> ";
 }
-
-
-
-
-
-
-
-
-
 
 /*********************************************************************
 ** Description:     displays the exit program menu
@@ -142,4 +132,3 @@ int Menu::validateNumber(int min, int max) {
 
     return validatedChoice;
 }
-

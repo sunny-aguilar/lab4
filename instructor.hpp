@@ -10,7 +10,6 @@
 #define INSTRUCTOR_HPP
 
 #include "person.hpp"
-#include <iostream>
 
 class Instructor : public Person {
 public:

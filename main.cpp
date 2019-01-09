@@ -27,36 +27,36 @@ int main() {
     university.addPersons();
 
 
-    Menu men;
+    Menu menu;
 
     do {
-        men.mainMenu();
-        men.setSelection( men.validateNumber(MENU_MIN, MENU_MAX) );
-        if (men.getSelection() == 1) {
-            men.buildingMenu();
+        menu.mainMenu();
+        menu.setSelection( menu.validateNumber(MENU_MIN, MENU_MAX) );
+        if (menu.getSelection() == 1) {
+            menu.buildingMenu();
             university.printBuildingInfo();
-            men.backToMainMenu();
-            men.setSelection( men.validateNumber(1,2) );
-            if (men.getSelection() == 1) {
+            menu.backToMainMenu();
+            menu.setSelection( menu.validateNumber(1,2) );
+            if (menu.getSelection() == 1) {
                 repeatMenu = true;
             }
-            else if (men.getSelection() == 2) {
+            else if (menu.getSelection() == 2) {
                 repeatMenu = false;
             }
         }
-        else if (men.getSelection() == 2) {
-            men.personMenu();
+        else if (menu.getSelection() == 2) {
+            menu.personMenu();
             university.displayPerson();
-            men.backToMainMenu();
-            men.setSelection( men.validateNumber(1,2) );
-            if (men.getSelection() == 1) {
+            menu.backToMainMenu();
+            menu.setSelection( menu.validateNumber(1,2) );
+            if (menu.getSelection() == 1) {
                 repeatMenu = true;
             }
-            else if (men.getSelection() == 2) {
+            else if (menu.getSelection() == 2) {
                 repeatMenu = false;
             }
         }
-        else if (men.getSelection() == 3) {
+        else if (menu.getSelection() == 3) {
             // create an array to hold person names and sent it to
             // the menu to display names of people to do work
             int totalPersons = university.getTotalPersons();
@@ -64,19 +64,19 @@ int main() {
             for (int x = 0; x < university.getTotalPersons(); x++) {
                 personNames.push_back(university.getPersonPointer(x)->getName());
             }
-            men.workMenu(totalPersons, personNames);
-            men.setSelection( men.validateNumber(1,2) );
-            university.displayPersonWorking( men.getSelection() - 1 );
-            men.backToMainMenu();
-            men.setSelection( men.validateNumber(1,2) );
-            if (men.getSelection() == 1) {
+            menu.workMenu(totalPersons, personNames);
+            menu.setSelection( menu.validateNumber(1,2) );
+            university.displayPersonWorking( menu.getSelection() - 1 );
+            menu.backToMainMenu();
+            menu.setSelection( menu.validateNumber(1,2) );
+            if (menu.getSelection() == 1) {
                 repeatMenu = true;
             }
-            else if (men.getSelection() == 2) {
+            else if (menu.getSelection() == 2) {
                 repeatMenu = false;
             }
         }
-        else if (men.getSelection() == 4) {
+        else if (menu.getSelection() == 4) {
             repeatMenu = false;
         }
         else {
@@ -97,7 +97,7 @@ int main() {
 //    Person *pp = new Instructor;
 //    pp->do_work();
 
-    men.exitMenu();
+    menu.exitMenu();
 
     return 0;
 }
