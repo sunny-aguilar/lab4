@@ -20,14 +20,15 @@ int main() {
     const int MENU_MAX = 4;
     bool repeatMenu = true;
 
+    // instantiate menu object
+    Menu menu;
     // instantiate  a university object
     University university;
+
     // instantiate two buildings
     university.addTwoBuildings();
     // instantiate 1 student and 1 instructor
     university.addPersons();
-    // instantiate menu object
-    Menu menu;
 
     do {
         menu.mainMenu();
