@@ -113,7 +113,7 @@ int main() {
         else {
             cout << "Error processing your menu choice!\n";
         }
-
+        cout << endl;
     } while (repeatMenu);
 
     // display exit menu
