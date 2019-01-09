@@ -1,10 +1,11 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Feb 2019
-** Description:     Describe
-**
-**
-**
+** Description:     University class holds objects of the Person class
+**                  and Building class as private variables. University
+**                  class creates Building and Person objects, manages
+**                  them, and gets the object information for display
+**                  purposes.
 *********************************************************************/
 #ifndef UNIVERSITY_HPP
 #define UNIVERSITY_HPP
