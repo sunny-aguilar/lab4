@@ -1,8 +1,8 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Feb 2019
-** Description:     Describe
-**
+** Description:     University class holds objects of the Person class
+**                  and Building class as private variables.
 **
 **
 *********************************************************************/

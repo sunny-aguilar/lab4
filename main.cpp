@@ -4,10 +4,10 @@
 ** Description:     This program implements a simple information
 **                  system that contains information about OSU.
 **                  This program contains 5 classes. University class
-**                  has two embeded classes (Building class & Person
+**                  has two embedded classes (Building class & Person
 **                  class) as private members. The Person class has
 **                  a hierarchy where the Student class and Instructor
-**                  class are derived from the Person class. 
+**                  class are derived from the Person class.
 **
 *********************************************************************/
 #include "university.hpp"
