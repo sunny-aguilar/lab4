@@ -65,7 +65,7 @@ int main() {
             menu.workMenu(totalPersons, personNames);
             menu.setSelection( menu.validateNumber(1,2) );
             // ENTER LOGIC HERE
-            university.displayPersonWorking( menu.getSelection() );
+            university.displayPersonWorking( menu.getSelection() - 1 );
 
 
             menu.backToMainMenu();
