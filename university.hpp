@@ -26,6 +26,7 @@ using std::endl;
 class University {
 public:
     University();
+    virtual ~University();
     void addStudent(double gpa, string name, int age);
     void addInstructor(double rating, string name, int age);
     void addPersons();

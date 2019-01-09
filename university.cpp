@@ -15,6 +15,12 @@ University::University() {
     name = "Oregon State University";
 }
 
+University::~University() {
+    for (int elements = 0; elements < person.size(); elements++) {
+        delete person[elements];
+    }
+}
+
 /*********************************************************************
 ** Description:    adds a building object to vector
 *********************************************************************/
