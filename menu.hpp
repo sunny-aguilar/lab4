@@ -21,7 +21,7 @@ using std::vector;
 
 class Menu {
 public:
-    void menuControl();
+    Menu();
     void setSelection(int sel);
     int getSelection();
     void mainMenu();

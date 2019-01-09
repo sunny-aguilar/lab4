@@ -9,25 +9,9 @@
 
 #include "menu.hpp"
 
-void Menu::menuControl() {
-//    mainMenu();
-//    switch ( validateNumber(1,4) ) {
-//        case 1:
-//            buildingMenu();
-//            break;
-//        case 2:
-//            personMenu();
-//            break;
-//        case 3:
-//            workMenu();
-//            break;
-//        case 4:
-//            exitMenu();
-//            break;
-//        default:
-//            cout << "Error processing your menu choice\n";
-//    }
-}
+Menu::Menu() {
+
+};
 
 /*********************************************************************
 ** Description:     sets selection member variable
