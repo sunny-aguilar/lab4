@@ -49,20 +49,23 @@ void University::addPersons() {
 *********************************************************************/
 double University::generateDouble(int max) {
     unsigned seed;
-    double randomGPA;
+    double randomNum;
     seed = static_cast<unsigned int>(time(nullptr));
     srand(seed);
-    randomGPA = rand() % max + 1;
-    return randomGPA;
+    randomNum = rand() % max + 1;
+    double randomGPA[] = {0.0, 1.0, 2.0, 3.0, 4.0};
+    randomNum = randomGPA[randomNum];
+
+    return randomNum;
 }
 
 int University::generateAge() {
     unsigned seed;
-    int randomGPA;
+    int randomAge;
     seed = static_cast<unsigned int>(time(nullptr));
     srand(seed);
-    randomGPA = rand() % (70 - 18 + 1) + 18;
-    return randomGPA;
+    randomAge = rand() % (70 - 18 + 1) + 18;
+    return randomAge;
 }
 
 // WRITE A FUNCTION TO ASK FOR A USER NAME AND ENTER UP ABOVE IN LINE 41 AND 42
@@ -78,9 +81,25 @@ Person *University::getPersonPointer(int number) {
 *********************************************************************/
 void University::displayPerson() {
     for (int x = 0; x < person.size(); x++) {
-        cout << getPersonPointer(x)->getName() << endl;
-        cout << getPersonPointer(x)->getAge() << endl;
+        cout << "Name: " << getPersonPointer(x)->getName() << endl;
+        cout << "Age:" << getPersonPointer(x)->getAge() << endl;
+
+        if (dynamic_cast<Student*>(getPersonPointer(x))) {
+            cout << "Age: " << getPersonPointer(x)->getGPA() << endl;
+        }
+        else if (dynamic_cast<Instructor*>(getPersonPointer(x))) {
+            cout << "Rating: " << getPersonPointer(x)->getRating() << endl;
+        }
+
+//        if ( getPersonPointer(x)->getGPA() ) {
+//            cout << "GPA: " << getPersonPointer(x)->getGPA() << endl;
+//        }
+//        else if ( getPersonPointer(x)->getRating() ) {
+//            cout << "Rating: " << getPersonPointer(x)->getRating() << endl;
+//        }
+
         getPersonPointer(x)->do_work();
+        cout << endl;
     }
 }
 

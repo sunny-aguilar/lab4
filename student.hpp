@@ -16,8 +16,8 @@ public:
     Student();
     Student(double gpa, string name, int age);
     void setGPA(double gpa);
-    double getGPA();
-    void do_work();
+    virtual void do_work();
+    virtual double getGPA() override;
 
 private:
     double gpa;

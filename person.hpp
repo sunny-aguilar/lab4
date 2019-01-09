@@ -22,6 +22,8 @@ public:
     void setAge(int age);
     int getAge();
     virtual void do_work();
+    virtual double getGPA();
+    virtual double getRating();
 
 private:
     std::string name;

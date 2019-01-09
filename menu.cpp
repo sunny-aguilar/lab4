@@ -66,7 +66,7 @@ void Menu::buildingMenu() {
 ** Description:     displays menu to print people info
 *********************************************************************/
 void Menu::personMenu() {
-    cout << "Printing Student and Instructor info\n";
+    cout << "\n- Printing Student and Instructor info -\n";
 }
 
 /*********************************************************************

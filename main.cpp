@@ -47,8 +47,6 @@ int main() {
         else if (menu.getSelection() == 2) {
             menu.personMenu();
             university.displayPerson();
-
-
             menu.backToMainMenu();
             menu.setSelection( menu.validateNumber(1,2) );
             if (menu.getSelection() == 1) {
@@ -89,6 +87,7 @@ int main() {
 
     Person *p = new Student;
     p->do_work();
+    p->getGPA();
 
     Person *pp = new Instructor;
     pp->do_work();

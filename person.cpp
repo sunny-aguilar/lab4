@@ -31,3 +31,13 @@ int Person::getAge() {
 void Person::do_work() {
     std::cout << "Doing person work!\n";
 }
+
+double Person::getGPA() {
+    std::cout << "Error! Person does not have a GPA\n";
+    return 0;
+}
+
+double Person::getRating() {
+    std::cout << "Error! Person doe snot have a Rating\n";
+    return 0;
+}

@@ -17,8 +17,9 @@ public:
     Instructor();
     Instructor(double rating, string name, int age);
     void setRating(double rating);
-    double getRating();
-    void do_work();
+    virtual void do_work();
+    virtual double getRating() override;
+
 
 private:
     double rating;
