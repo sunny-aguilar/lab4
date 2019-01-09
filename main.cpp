@@ -16,6 +16,10 @@ using std::cout;
 using std::endl;
 
 int main() {
+    for (int n : {1, 2, 3, 4, 5})
+        cout << n << " ";
+    cout << endl;
+
     const int MENU_MIN = 1;
     const int MENU_MAX = 4;
     bool repeatMenu = true;

@@ -16,8 +16,11 @@ University::University() {
 }
 
 University::~University() {
-    for (int elements = 0; elements < person.size(); elements++) {
-        delete person[elements];
+//    for (int elements = 0; elements < person.size(); elements++) {
+//        delete person[elements];
+//    }
+    for (auto val: person) {
+        delete val;
     }
 }
 
