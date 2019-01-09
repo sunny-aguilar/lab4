@@ -38,8 +38,8 @@ void University::addInstructor(double rating, string name, int age) {
 }
 
 void University::addPersons() {
-    addStudent( generateDouble(4), "James Jameson", generateAge() );
-    addInstructor( generateDouble(5), "Jill Joy", generateAge() );
+    addStudent( generateDouble(), "James Jameson", generateAge() );
+    addInstructor( generateDouble(), "Jill Joy", generateAge() );
 }
 
 /*********************************************************************
@@ -47,12 +47,12 @@ void University::addPersons() {
 **                  given by the parameter passed in; used for getting
 **                  a GPA and or rating.
 *********************************************************************/
-double University::generateDouble(int max) {
+double University::generateDouble() {
     unsigned seed;
     int randomNum;
     seed = static_cast<unsigned int>(time(nullptr));
     srand(seed);
-    randomNum = rand() % max + 1;
+    randomNum = rand() % 4 + 1;
     double randomGPA[] = {0.0, 1.0, 2.0, 3.0, 4.0};
     return randomGPA[randomNum];
 }
@@ -63,6 +63,7 @@ int University::generateAge() {
     seed = static_cast<unsigned int>(time(nullptr));
     srand(seed);
     randomAge = rand() % (70 - 18 + 1) + 18;
+    int age[] = {18,19,20,21,22,23,33,36,43,46,53,56,63,68,70};
     return randomAge;
 }
 
@@ -82,19 +83,13 @@ void University::displayPerson() {
         cout << "Name: " << getPersonPointer(x)->getName() << endl;
         cout << "Age:" << getPersonPointer(x)->getAge() << endl;
 
+        cout << std::fixed << std::setprecision(1);
         if (dynamic_cast<Student*>(getPersonPointer(x))) {
             cout << "GPA: " << getPersonPointer(x)->getGPA() << endl;
         }
         else if (dynamic_cast<Instructor*>(getPersonPointer(x))) {
             cout << "Rating: " << getPersonPointer(x)->getRating() << endl;
         }
-
-//        if ( getPersonPointer(x)->getGPA() ) {
-//            cout << "GPA: " << getPersonPointer(x)->getGPA() << endl;
-//        }
-//        else if ( getPersonPointer(x)->getRating() ) {
-//            cout << "Rating: " << getPersonPointer(x)->getRating() << endl;
-//        }
 
         getPersonPointer(x)->do_work();
         cout << endl;

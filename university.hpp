@@ -18,6 +18,7 @@
 #include <string>
 #include <vector>
 #include <ctime>
+#include <iomanip>
 using std::vector;
 using std::cout;
 using std::endl;
@@ -28,7 +29,7 @@ public:
     void addStudent(double gpa, string name, int age);
     void addInstructor(double rating, string name, int age);
     void addPersons();
-    double generateDouble(int max);
+    double generateDouble(;
     int generateAge();
     Person *getPersonPointer(int number);
     void displayPerson();
