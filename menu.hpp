@@ -10,6 +10,7 @@
 #define MENU_HPP
 
 #include <iostream>
+#include <cstring>
 #include <sstream>
 #include <string>
 #include <vector>
