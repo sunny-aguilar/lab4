@@ -23,5 +23,6 @@ double Instructor::getRating() {
 }
 
 void Instructor::do_work() {
-    std::cout << "Doing instructor work!\n\n";
+    std::cout << getName() << " graded papers for "
+              << generateHoursWorked() << " hours.\n\n";
 }
