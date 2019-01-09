@@ -49,14 +49,12 @@ void University::addPersons() {
 *********************************************************************/
 double University::generateDouble(int max) {
     unsigned seed;
-    double randomNum;
+    int randomNum;
     seed = static_cast<unsigned int>(time(nullptr));
     srand(seed);
     randomNum = rand() % max + 1;
     double randomGPA[] = {0.0, 1.0, 2.0, 3.0, 4.0};
-    randomNum = randomGPA[randomNum];
-
-    return randomNum;
+    return randomGPA[randomNum];
 }
 
 int University::generateAge() {
@@ -85,7 +83,7 @@ void University::displayPerson() {
         cout << "Age:" << getPersonPointer(x)->getAge() << endl;
 
         if (dynamic_cast<Student*>(getPersonPointer(x))) {
-            cout << "Age: " << getPersonPointer(x)->getGPA() << endl;
+            cout << "GPA: " << getPersonPointer(x)->getGPA() << endl;
         }
         else if (dynamic_cast<Instructor*>(getPersonPointer(x))) {
             cout << "Rating: " << getPersonPointer(x)->getRating() << endl;
