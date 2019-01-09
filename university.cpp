@@ -16,7 +16,7 @@ University::University() {
 }
 
 University::~University() {
-    for (auto val: person) {
+    for (auto &val: person) {
         delete val;
     }
 }
