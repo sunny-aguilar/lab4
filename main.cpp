@@ -57,7 +57,15 @@ int main() {
             }
         }
         else if (menu.getSelection() == 3) {
-            menu.workMenu();
+            int totalPersons = university.getTotalPersons();
+            cout << "Total Persons: " << totalPersons << endl;
+            vector<string> personNames;
+            for (int x = 0; x < university.getTotalPersons(); x++) {
+                cout << "Total persons: " << university.getPersonPointer(x)->getName() << endl;
+//                personNames[x] = university.getPersonPointer(x)->getName();
+//                cout << personNames[x] << endl;
+            }
+            menu.workMenu(totalPersons);
             menu.setSelection( menu.validateNumber(1,2) );
             // ENTER FUNCTION HERE TO SET WORKER
 //            university.

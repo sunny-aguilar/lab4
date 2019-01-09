@@ -33,6 +33,7 @@ public:
     int generateAge();
     Person *getPersonPointer(int number);
     void displayPerson();
+    int getTotalPersons();
     void printBuildingInfo();
     void addBuilding(string name, int size, string address);
     void addTwoBuildings();

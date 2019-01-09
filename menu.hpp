@@ -23,7 +23,7 @@ public:
     void mainMenu();
     void buildingMenu();
     void personMenu();
-    void workMenu();
+    void workMenu(int totalPersons);
     void backToMainMenu();
     void exitMenu();
     int validateNumber(int min, int max);

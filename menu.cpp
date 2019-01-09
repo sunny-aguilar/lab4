@@ -72,10 +72,11 @@ void Menu::personMenu() {
 /*********************************************************************
 ** Description:     displays menu to chose a person to do work
 *********************************************************************/
-void Menu::workMenu() {
+void Menu::workMenu(int totalPersons) {
     cout << "Choose a person to do work\n";
-    cout << "1. Choose person 1\n";
-    cout << "2. Choose person 2\n";
+    for (int i = 0; i < totalPersons; i++) {
+        cout << i+1 << ". Choose person " << i+1 << "\n";
+    }
 }
 
 void Menu::backToMainMenu() {

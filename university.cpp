@@ -70,9 +70,18 @@ int University::generateAge() {
 // WRITE A FUNCTION TO ASK FOR A USER NAME AND ENTER UP ABOVE IN LINE 41 AND 42
 
 
-
+/*********************************************************************
+** Description:    gets the person pointer from the vector
+*********************************************************************/
 Person *University::getPersonPointer(int number) {
     return person[number];
+}
+
+/*********************************************************************
+** Description:    gets the total people in the person vector
+*********************************************************************/
+int University::getTotalPersons() {
+    return person.size();
 }
 
 /*********************************************************************
