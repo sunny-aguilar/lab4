@@ -48,15 +48,20 @@ void University::addStudent(double gpa, string name, int age) {
     person.push_back(s);
 }
 
-
+/*********************************************************************
+** Description:    returns an instructor object
+*********************************************************************/
 void University::addInstructor(double rating, string name, int age) {
     Instructor *i = new Instructor(rating, name, age);
     person.push_back(i);
 }
 
+/*********************************************************************
+** Description:    adds a student and instructor object when called
+*********************************************************************/
 void University::addPersons() {
-    addStudent( generateDouble(), "James Jameson", generateAge() );
-    addInstructor( generateDouble(), "Jill Joy", generateAge() );
+    addStudent( generateDouble(4), "James Jameson", generateAge() );
+    addInstructor( generateDouble(5), "Jill Joy", generateAge() );
 }
 
 /*********************************************************************
@@ -64,16 +69,27 @@ void University::addPersons() {
 **                  given by the parameter passed in; used for getting
 **                  a GPA and or rating.
 *********************************************************************/
-double University::generateDouble() {
+double University::generateDouble(int max) {
     unsigned seed;
     int randomNum;
-    double randomGPA[] = {0.0, 1.0, 2.0, 3.0, 4.0};
     seed = static_cast<unsigned int>(time(nullptr));
     srand(seed);
-    randomNum = rand() % 4 + 1;
-    return randomGPA[randomNum];
+    randomNum = rand() % max + 1;
+    return randomNum;
+
+//    unsigned seed;
+//    int randomNum;
+//    double randomGPA[] = {0.0, 1.0, 2.0, 3.0, 4.0};
+//    seed = static_cast<unsigned int>(time(nullptr));
+//    srand(seed);
+//    randomNum = rand() % 4 + 1;
+//    return randomGPA[randomNum];
 }
 
+/*********************************************************************
+** Description:     returns a random age from a prepopulated list of
+**                  age groups that is randomly selected and returned
+*********************************************************************/
 int University::generateAge() {
     unsigned seed;
     int randomNum;
