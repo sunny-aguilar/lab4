@@ -59,12 +59,12 @@ double University::generateDouble() {
 
 int University::generateAge() {
     unsigned seed;
-    int randomAge;
+    int randomNum;
     seed = static_cast<unsigned int>(time(nullptr));
     srand(seed);
-    randomAge = rand() % (70 - 18 + 1) + 18;
+    randomNum = rand() % 14 + 1;
     int age[] = {18,19,20,21,22,23,33,36,43,46,53,56,63,68,70};
-    return randomAge;
+    return age[randomNum];
 }
 
 // WRITE A FUNCTION TO ASK FOR A USER NAME AND ENTER UP ABOVE IN LINE 41 AND 42
@@ -80,17 +80,17 @@ Person *University::getPersonPointer(int number) {
 *********************************************************************/
 void University::displayPerson() {
     for (int x = 0; x < person.size(); x++) {
-        cout << "Name: " << getPersonPointer(x)->getName() << endl;
-        cout << "Age:" << getPersonPointer(x)->getAge() << endl;
-
         cout << std::fixed << std::setprecision(1);
         if (dynamic_cast<Student*>(getPersonPointer(x))) {
-            cout << "GPA: " << getPersonPointer(x)->getGPA() << endl;
+            cout << "Student Name: " << getPersonPointer(x)->getName() << endl;
+            cout << "Student GPA: " << getPersonPointer(x)->getGPA() << endl;
+            cout << "Student Age: " << getPersonPointer(x)->getAge() << endl;
         }
         else if (dynamic_cast<Instructor*>(getPersonPointer(x))) {
-            cout << "Rating: " << getPersonPointer(x)->getRating() << endl;
+            cout << "Instructor Name: " << getPersonPointer(x)->getName() << endl;
+            cout << "Instructor Rating: " << getPersonPointer(x)->getRating() << endl;
+            cout << "Instructor Age: " << getPersonPointer(x)->getAge() << endl;
         }
-
         getPersonPointer(x)->do_work();
         cout << endl;
     }

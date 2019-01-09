@@ -29,7 +29,7 @@ public:
     void addStudent(double gpa, string name, int age);
     void addInstructor(double rating, string name, int age);
     void addPersons();
-    double generateDouble(;
+    double generateDouble();
     int generateAge();
     Person *getPersonPointer(int number);
     void displayPerson();
