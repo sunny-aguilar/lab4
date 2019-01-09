@@ -61,14 +61,14 @@ int main() {
             vector<string> personNames;
             for (int x = 0; x < university.getTotalPersons(); x++) {
                 personNames.push_back(university.getPersonPointer(x)->getName());
-                cout << personNames[x] << endl;
             }
             menu.workMenu(totalPersons, personNames);
             menu.setSelection( menu.validateNumber(1,2) );
-            // ENTER FUNCTION HERE TO SET WORKER
-//            university.
+            // ENTER LOGIC HERE
+            university.displayPersonWorking( menu.getSelection() );
 
 
+            menu.backToMainMenu();
             menu.setSelection( menu.validateNumber(1,2) );
             if (menu.getSelection() == 1) {
                 repeatMenu = true;

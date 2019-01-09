@@ -100,11 +100,14 @@ void University::displayPerson() {
             cout << "Instructor Rating: " << getPersonPointer(x)->getRating() << endl;
             cout << "Instructor Age: " << getPersonPointer(x)->getAge() << endl;
         }
-        getPersonPointer(x)->do_work();
+//        getPersonPointer(x)->do_work();
         cout << endl;
     }
 }
 
+void University::displayPersonWorking(int number) {
+    getPersonPointer(number)->do_work();
+}
 
 
 /*********************************************************************

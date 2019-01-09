@@ -73,10 +73,13 @@ void Menu::personMenu() {
 ** Description:     displays menu to chose a person to do work
 *********************************************************************/
 void Menu::workMenu(int totalPersons, vector<string> vect) {
+//    int counter = 0;
     cout << "Choose a person to do work\n";
     for (int i = 0; i < totalPersons; i++) {
         cout << i+1 << ". Choose " << vect[i] << "\n";
+//        counter = i+22;
     }
+//    cout << counter << ". Back to Main Menu\n";
 }
 
 void Menu::backToMainMenu() {
