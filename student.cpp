@@ -11,21 +11,38 @@
 *********************************************************************/
 #include "student.hpp"
 
-
+/*********************************************************************
+** Description:    default constructor that sets the GPA data member
+*********************************************************************/
 Student::Student() : gpa{0.0} { }
 
+/*********************************************************************
+** Description:    3-arg constructor that sets the GPA data member as
+**                  well as the inherited member variables from its
+**                  base class.
+*********************************************************************/
 Student::Student(double gpa, string name, int age)
     : gpa{gpa}, Person{name, age} {
 }
 
+/*********************************************************************
+** Description:    setter function for GPA data member
+*********************************************************************/
 void Student::setGPA(double gpa) {
     this->gpa = gpa;
 }
 
+/*********************************************************************
+** Description:    getter functiont that gets the GPA data member
+*********************************************************************/
 double Student::getGPA() {
     return gpa;
 }
 
+/*********************************************************************
+** Description:     virtual function that overrides the base class
+**                  function
+*********************************************************************/
 void Student::do_work() {
     std::cout << getName() << " did " << generateHoursWorked()
               << " hours of homework.\n\n";
