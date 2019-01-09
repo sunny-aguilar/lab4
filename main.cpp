@@ -47,7 +47,7 @@ int main() {
         else if (menu.getSelection() == 2) {
             menu.personMenu();
             university.displayPerson();
-            menu.backToMainMenu(); 
+            menu.backToMainMenu();
             menu.setSelection( menu.validateNumber(1,2) );
             if (menu.getSelection() == 1) {
                 repeatMenu = true;

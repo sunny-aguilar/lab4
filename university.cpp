@@ -50,20 +50,20 @@ void University::addPersons() {
 double University::generateDouble() {
     unsigned seed;
     int randomNum;
+    double randomGPA[] = {0.0, 1.0, 2.0, 3.0, 4.0};
     seed = static_cast<unsigned int>(time(nullptr));
     srand(seed);
     randomNum = rand() % 4 + 1;
-    double randomGPA[] = {0.0, 1.0, 2.0, 3.0, 4.0};
     return randomGPA[randomNum];
 }
 
 int University::generateAge() {
     unsigned seed;
     int randomNum;
+    int age[] = {18,19,20,21,22,23,33,36,43,46,53,56,63,68,70};
     seed = static_cast<unsigned int>(time(nullptr));
     srand(seed);
     randomNum = rand() % 14 + 1;
-    int age[] = {18,19,20,21,22,23,33,36,43,46,53,56,63,68,70};
     return age[randomNum];
 }
 
