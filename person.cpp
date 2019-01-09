@@ -1,10 +1,12 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Feb 2019
-** Description:     Person class is a polymorphic class and is the
-**                  base class for Student and Instructor classes.
-**
-**
+** Description:     Person class is the base class for the Student
+**                  class and Instructor class. Person class has
+**                  various virtual functions that allow for
+**                  polymorphic behavior. Person class does not have
+**                  any pure virtual functions so it is not an abstract
+**                  class.
 *********************************************************************/
 #include "person.hpp"
 

@@ -1,10 +1,14 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Feb 2019
-** Description:     Describe
-**
-**
-**
+** Description:     Instructor class instantiates objects of type
+**                  Instructor and are assigned to a pointer that
+**                  points to its base class data type. The Instructor
+**                  class is a specialized version of the Person
+**                  class and holds information specific to
+**                  OSU instructors. This information is accessed via
+**                  its virtual functions that override the behavior
+**                  of its base class.
 *********************************************************************/
 #include "instructor.hpp"
 
