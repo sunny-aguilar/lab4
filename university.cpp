@@ -76,14 +76,6 @@ double University::generateDouble(int max) {
     srand(seed);
     randomNum = rand() % max + 1;
     return randomNum;
-
-//    unsigned seed;
-//    int randomNum;
-//    double randomGPA[] = {0.0, 1.0, 2.0, 3.0, 4.0};
-//    seed = static_cast<unsigned int>(time(nullptr));
-//    srand(seed);
-//    randomNum = rand() % 4 + 1;
-//    return randomGPA[randomNum];
 }
 
 /*********************************************************************
