@@ -13,7 +13,7 @@
 #ifndef STUDENT_HPP
 #define STUDENT_HPP
 
-#include "person.hpp"
+#include "person.hpp"                           // base class header
 
 class Student : public Person {
 public:
