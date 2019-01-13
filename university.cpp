@@ -70,12 +70,9 @@ void University::addPersons() {
 **                  a GPA and or rating.
 *********************************************************************/
 double University::generateDouble(int max) {
-    unsigned seed;
     int randomNum;
-    seed = static_cast<unsigned int>(time(nullptr));
-    srand(seed);
     randomNum = rand() % max + 1;
-    return randomNum;
+    return randomNum;       // return age
 }
 
 /*********************************************************************
@@ -85,13 +82,10 @@ double University::generateDouble(int max) {
 **                  to generate number for.
 *********************************************************************/
 int University::generateAge(int selectType) {
-    unsigned seed;
     int randomAge = 0;
     int randomNum = 0;
     int studentAge[] = {18,19,20,21,22,23,24,30,31,32,33,34,35,36,37};
     int teacherAge[] = {28,30,34,38,30,44,48,50,54,58,60,64,68,70,74};
-    seed = static_cast<unsigned int>(time(nullptr));
-    srand(seed);
     randomNum = rand() % 14 + 1;
     switch (selectType) {
         case 1:
@@ -103,11 +97,8 @@ int University::generateAge(int selectType) {
         default:
             cout << "Error generating an age\n";
     }
-    return randomAge;
+    return randomAge;       // return age
 }
-
-// WRITE A FUNCTION TO ASK FOR A USER NAME AND ENTER UP ABOVE IN LINE 41 AND 42
-
 
 /*********************************************************************
 ** Description:    gets the person pointer from the vector

@@ -20,6 +20,10 @@ using std::cout;
 using std::endl;
 
 int main() {
+    // create random number generator
+    auto seed = static_cast<unsigned int>(time(nullptr));
+    srand(seed);
+
     // create constants and bool value
     const int MENU_MIN = 1;             // control menu selection
     const int MENU_MAX = 4;             // control menu selection
