@@ -1,10 +1,13 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Feb 2019
-** Description:     Describe
-**
-**
-**
+** Description:     Building class creates buildings inside of the
+**                  University class. Buildings is instantiated
+**                  inside of the University object where two buildings
+**                  are added at the start of the program. Each
+**                  building is stored inside a vector. Building data
+**                  members consist of a building name, building size
+**                  and address.
 *********************************************************************/
 #ifndef BUILDING_HPP
 #define BUILDING_HPP
