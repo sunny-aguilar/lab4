@@ -155,7 +155,8 @@ void University::addStudent(double gpa, string name, int age) {
 }
 
 /*********************************************************************
-** Description:    returns an instructor object
+** Description:     adds a pointer to an instructor object to the
+**                  vector of pointers
 *********************************************************************/
 void University::addInstructor(double rating, string name, int age) {
     Instructor *i = new Instructor(rating, name, age);
@@ -178,7 +179,7 @@ void University::addPersons() {
 double University::generateDouble(int max) {
     int randomNum;
     randomNum = rand() % max + 1;
-    return randomNum;       // return age
+    return randomNum;       // return a random double from 1 to max
 }
 
 /*********************************************************************
