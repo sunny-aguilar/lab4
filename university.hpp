@@ -16,6 +16,7 @@
 #ifndef UNIVERSITY_HPP
 #define UNIVERSITY_HPP
 
+#include "menu.hpp"
 #include "building.hpp"
 #include "person.hpp"
 #include "student.hpp"
@@ -33,6 +34,8 @@ class University {
 public:
     University();
     virtual ~University();
+    void startSim();
+    void gameFlow();
     void addStudent(double gpa, string name, int age);
     void addInstructor(double rating, string name, int age);
     void addPersons();
@@ -51,6 +54,7 @@ private:
     std::string name;
     vector<Building> buildings;
     vector<Person *> person;
+    Menu menu;
 
 };
 
