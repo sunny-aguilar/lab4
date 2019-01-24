@@ -1,6 +1,6 @@
 # File: 	makefile
 # Author: 	Sandro Aguilar
-# Date: 	January 2019
+# Date: 	February 2019
 # Description:	Makefile for Lab 4 University
 # Variables to control Makefile operation
 
