@@ -42,7 +42,9 @@ void University::startSim() {
 }
 
 /*********************************************************************
-** Description:     controls program logic
+** Description:     controls program logic. User is prompted to
+ *                  select choices from the menu. Constant variables
+ *                  are used to control menu options.
 *********************************************************************/
 void University::programFlow() {
     // create constants and bool value
@@ -136,7 +138,7 @@ void University::programFlow() {
 }
 
 /*********************************************************************
-** Description:    adds a building object to vector
+** Description:    adds a building object to a vector
 *********************************************************************/
 void University::addBuilding(string name, int size, string address) {
     Building b;
@@ -144,7 +146,8 @@ void University::addBuilding(string name, int size, string address) {
 }
 
 /*********************************************************************
-** Description:    returns a student object
+** Description:     adds a pointer to a student object to the vector
+ *                  of pointers
 *********************************************************************/
 void University::addStudent(double gpa, string name, int age) {
     Person *s = new Student(gpa, name, age);
