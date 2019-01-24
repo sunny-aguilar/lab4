@@ -36,21 +36,21 @@ University::~University() {
 ** Description:     start university program simulation
 *********************************************************************/
 void University::startSim() {
-    addTwoBuildings();
-    addPersons();
-    gameFlow();
+    addTwoBuildings();      // add two buildings
+    addPersons();           // add two persons
+    programFlow();          //begin with program
 }
 
 /*********************************************************************
 ** Description:     controls program logic
 *********************************************************************/
-void University::gameFlow() {
+void University::programFlow() {
     // create constants and bool value
     const int MENU_MIN = 1;             // control menu selection
     const int MENU_MAX = 4;             // control menu selection
     bool repeatMenu = true;             // control menu
 
-// loop controls menu
+    // loop controls menu
     do {
         // show main menu, validate & set selection
         menu.mainMenu();
@@ -133,7 +133,6 @@ void University::gameFlow() {
 
     // display exit menu
     menu.exitMenu();
-
 }
 
 /*********************************************************************
