@@ -7,7 +7,8 @@
 **                  specialized version of the Person class since it
 **                  holds information about students. This class has
 **                  two virtual functions that override the behavior
-**                  of the Person class functions.
+**                  of the Person class functions. Student inherits
+**                  its functions and variables from Person via Public.
 *********************************************************************/
 #include "student.hpp"
 
