@@ -11,38 +11,51 @@ CXXFLAGS += -g
 CXXFLAGS += -std=c++0x
 
 OBJECTS = main.o
-OBJECTS += Die.o
-OBJECTS += LoadedDie.o
-OBJECTS += Game.o
+OBJECTS += university.o
+OBJECTS += menu.o
+OBJECTS += building.o
+OBJECTS += person.o
+OBJECTS += student.o
+OBJECTS += instructor.o
 
-HPPs = Die.hpp
-HPPs += LoadedDie.hpp
-HPPs += Game.hpp
+HPPs = university.hpp
+HPPs += menu.hpp
+HPPs += building.hpp
+HPPs += person.hpp
+HPPs += student.hpp
+HPPs += instructor.hpp
 
 CPPs = main.cpp
-CPPs += Die.cpp
-CPPs += LoadedDie.cpp
-CPPs += Game.cpp
+CPPs += university.cpp
+CPPs += menu.cpp
+CPPs += building.cpp
+CPPs += person.cpp
+CPPs += student.cpp
+CPPs += instructor.cpp
 
 # Targets needed to bring the executable up to date
-lab3: $(OBJECTS)
-	$(CXX) $(CXXFLAGS) -o lab3 $(OBJECTS)
+lab4: $(OBJECTS)
+	$(CXX) $(CXXFLAGS) -o lab4 $(OBJECTS)
 
 main.o: main.cpp $(HPPs)
 	$(CXX) $(CXXFLAGS) -c main.cpp
 
-Die.o: Die.hpp
+menu.o: menu.hpp
 
-LoadedDie.o: LoadedDie.hpp
+building.o: building.hpp
 
-Game.o: Game.hpp
+person.o: person.hpp
+
+student.o: student.hpp
+
+instructor.o: instructor.hpp
 
 # Clean-up operations
 clean:
-	rm lab3 *.o
+	rm lab4 *.o
 
 debug:
-	valgrind -v --leak-check=full --show-leak-kinds=all --track-origins=yes ./lab3
+	valgrind -v --leak-check=full --show-leak-kinds=all --track-origins=yes ./lab4
 
 zip:
-	zip -D Lab3_Aguilar_Sandro.zip $(CPPs) $(HPPs) $(TXTS) makefile *.txt
+	zip -D Lab4_Aguilar_Sandro.zip $(CPPs) $(HPPs) $(TXTS) makefile *.txt
