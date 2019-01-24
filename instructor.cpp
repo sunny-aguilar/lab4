@@ -15,7 +15,7 @@
 /*********************************************************************
 ** Description:    default constructor that sets the GPA data member
 *********************************************************************/
-Instructor::Instructor() : rating{0.0} { }
+Instructor::Instructor() : rating{0.0} {}
 
 /*********************************************************************
 ** Description:     3-arg constructor that sets the rating data member

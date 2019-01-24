@@ -15,7 +15,7 @@
 /*********************************************************************
 ** Description:    default constructor that sets the GPA data member
 *********************************************************************/
-Student::Student() : gpa{0.0} { }
+Student::Student() : gpa{0.0} {}
 
 /*********************************************************************
 ** Description:    3-arg constructor that sets the GPA data member as
