@@ -186,25 +186,30 @@ void University::programFlow() {
             // read in data from file
             menu.menuReadFile();
 
+            // creating necessary variables
+            string fileName;
+            ifstream inFile;
+            string outFileName;
+
             int selection = menu.validateNumber(1,5);
             if (selection == 1) {
                 // add buildings from file
-
+                cout << "Enter Building File Name\n";
 
 
 
             }
             else if (selection == 2) {
                 // add students from file
-
+                cout << "Enter Student File Name\n";
 
 
 
             }
             else if (selection == 3) {
                 // add instructors from file
+                cout << "Enter Instructor File Name\n";
 
-                
             }
             else if (selection == 4) {
                 // exit to main menu

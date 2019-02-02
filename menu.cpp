@@ -83,15 +83,6 @@ void Menu::menuReadFile() {
 }
 
 /*********************************************************************
-** Description:     prompts user to read in info from file
-*********************************************************************/
-void Menu::menuReadStudents() {
-    cout << "1. Upload\n";
-    cout << "2. Enter 2 to Exit Program\n";
-    cout << ">> ";
-}
-
-/*********************************************************************
 ** Description:     prompts user to go back to main menu or exit
 *********************************************************************/
 void Menu::backToMainMenu() {

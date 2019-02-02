@@ -22,11 +22,14 @@
 #include "student.hpp"
 #include "instructor.hpp"
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <vector>
 #include <ctime>
 #include <iomanip>
 using std::vector;
+using std::ifstream;
+using std::ofstream;
 using std::cout;
 using std::endl;
 
