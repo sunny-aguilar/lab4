@@ -1,6 +1,6 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
-** Date:            Feb 2019
+** Date:            Feb 2, 2019
 ** Description:     Person class is the base class for the Student
 **                  class and Instructor class. Person class has
 **                  various virtual functions that allow for

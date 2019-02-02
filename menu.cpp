@@ -1,6 +1,6 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
-** Date:            Feb 2019
+** Date:            Feb 2, 2019
 ** Description:     Menu class is used to display menus and validate
 **                  user input. This class is not part of a class
 **                  hierarchy but works in conjunction with the

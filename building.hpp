@@ -1,6 +1,6 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
-** Date:            Feb 2019
+** Date:            Feb 2, 2019
 ** Description:     Building class creates buildings inside of the
 **                  University class. Buildings is instantiated
 **                  inside of the University object where two buildings

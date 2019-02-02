@@ -1,6 +1,6 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
-** Date:            Feb 2019
+** Date:            Feb 2, 2019
 ** Description:     This program implements a simple information
 **                  system that contains information about OSU.
 **                  This program contains 5 classes. University class

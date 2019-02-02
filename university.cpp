@@ -1,6 +1,6 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
-** Date:            Feb 2019
+** Date:            Feb 2, 2019
 ** Description:     University class holds objects of the Person class
 **                  and Building class as private variables. University
 **                  class creates Building and Person objects, manages
@@ -259,8 +259,8 @@ void University::displayPersonWorking(int number) {
 void University::printBuildingInfo() {
     for (Building val: buildings) {
         cout << val.getBuildingName() << endl;
-        cout << val.getBuildingSize() << endl;
-        cout << val.getBuildingAddress() << endl << endl;
+        cout << val.getBuildingAddress() << endl;
+        cout << val.getBuildingSize() << " sq. feet" << endl << endl;
     }
 }
 

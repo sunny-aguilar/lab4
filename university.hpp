@@ -1,6 +1,6 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
-** Date:            Feb 2019
+** Date:            Feb 2, 2019
 ** Description:     University class holds objects of the Person class
 **                  and Building class as private variables. University
 **                  class creates Building and Person objects, manages

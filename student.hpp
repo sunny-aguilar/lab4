@@ -1,6 +1,6 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
-** Date:            Feb 2019
+** Date:            Feb 2, 2019
 ** Description:     Student class instantiates objects of type Student
 **                  and are assigned to a pointer that points to its
 **                  base class data type. The Student class is a
