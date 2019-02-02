@@ -27,10 +27,12 @@ public:
     void mainMenu();
     void buildingMenu();
     void personMenu();
+    void addMorePeople();
     void workMenu(int totalPersons, vector<string> vect);
     void backToMainMenu();
     void exitMenu();
     int validateNumber(int min, int max);
+    int validateNumber(double min, double max);
 
 private:
     int selection;

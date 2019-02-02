@@ -123,7 +123,29 @@ void University::programFlow() {
                 repeatMenu = false;
             }
         }
-        else if (menu.getSelection() == 4) {
+        else if (menu.getSelection() == 5) {
+            // display menu to add more people
+            menu.addMorePeople();
+            menu.setSelection( menu.validateNumber(1,2) );
+            if (menu.getSelection() == 1) {
+                // user selects to add students
+                double studentGPA = 0.0;
+
+                cout << "Add Student:\n";
+                cout << "Enter the students G.P.A (0.0 - 4.0)\n";
+                studentGPA = menu.validateNumber(0.0, 4.0);
+                
+
+
+
+            }
+            else if (menu.getSelection() == 2) {
+                // user selects to add instructors
+
+            }
+
+        }
+        else if (menu.getSelection() == 5) {
             // user menu option 4 (exit program)
             repeatMenu = false;
         }
@@ -169,6 +191,13 @@ void University::addInstructor(double rating, string name, int age) {
 void University::addPersons() {
     addStudent( generateDouble(4), "James Jameson", generateAge(1) );
     addInstructor( generateDouble(5), "Jill Joy", generateAge(2) );
+}
+
+/*********************************************************************
+** Description:    EXTRA CREDIT - adds more people during runtime
+*********************************************************************/
+void University::addMorePersons() {
+
 }
 
 /*********************************************************************

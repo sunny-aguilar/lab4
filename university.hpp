@@ -39,6 +39,7 @@ public:
     void addStudent(double gpa, string name, int age);
     void addInstructor(double rating, string name, int age);
     void addPersons();
+    void addMorePersons();
     double generateDouble(int max);
     int generateAge(int selectType);
     Person *getPersonPointer(int number);

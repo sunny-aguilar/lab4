@@ -30,7 +30,8 @@ void Menu::mainMenu() {
     cout << "1. Print Building Info\n";
     cout << "2. Print Student & Staff Info\n";
     cout << "3. Choose a Person to do Work\n";
-    cout << "4. Exit the Program\n";
+    cout << "4. EXTRA CREDIT - Add More People\n";
+    cout << "5. Exit the Program\n";
     cout << ">> ";
 }
 
@@ -46,6 +47,17 @@ void Menu::buildingMenu() {
 *********************************************************************/
 void Menu::personMenu() {
     cout << "\n- Printing Student and Instructor info -\n";
+}
+
+/*********************************************************************
+** Description:     EXTRA CREDIT - prompts user to add more people at
+**                  runtime
+*********************************************************************/
+void Menu::addMorePeople() {
+    cout << "\n- Add More Students and Instructors -\n";
+    cout << "1. Add Student\n";
+    cout << "2. Add Instructor\n";
+    cout << ">> ";
 }
 
 /*********************************************************************
@@ -127,4 +139,12 @@ int Menu::validateNumber(int min, int max) {
     } while (tooLong || isNotDigit || notInRange);
 
     return validatedChoice;
+}
+
+/*********************************************************************
+** Description:     general validator where the parameters are the
+**                  min and max numbers acceptable
+*********************************************************************/
+int Menu::validateNumber(double min, double max) {
+    if (typeof())
 }
