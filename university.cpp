@@ -49,7 +49,7 @@ void University::startSim() {
 void University::programFlow() {
     // create constants and bool value
     const int MENU_MIN = 1;             // control menu selection
-    const int MENU_MAX = 4;             // control menu selection
+    const int MENU_MAX = 5;             // control menu selection
     bool repeatMenu = true;             // control menu
 
     // loop controls menu
@@ -142,7 +142,7 @@ void University::programFlow() {
                 // get student GPA
                 cout << "Enter the student's G.P.A (0.0 - 4.0)\n";
                 cout << ">> ";
-                gpa = menu.validateNumber("GPA",48,52,48,57);
+                gpa = menu.validateDecimal("GPA",48,52,48,57);
 
                 // get student age
                 cout << "Enter Student's Age\n";
@@ -169,7 +169,7 @@ void University::programFlow() {
                 // get Instructor rating
                 cout << "Enter the Instructor's Rating (0.0 - 5.0)\n";
                 cout << ">> ";
-                rating = menu.validateNumber("Rating",48,53,48,57);
+                rating = menu.validateDecimal("Rating",48,53,48,57);
 
                 // get Instructor age
                 cout << "Enter Instructor's Age\n";

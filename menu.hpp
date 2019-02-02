@@ -32,7 +32,7 @@ public:
     void backToMainMenu();
     void exitMenu();
     int validateNumber(int min, int max);
-    double validateNumber(string rating, char min1, char max1, char min2, char max2);
+    double validateDecimal(string rating, char min1, char max1, char min2, char max2);
 
 private:
     int selection;

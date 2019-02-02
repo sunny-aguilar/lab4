@@ -145,7 +145,7 @@ int Menu::validateNumber(int min, int max) {
 ** Description:     general validator where the parameters are the
 **                  min and max numbers acceptable
 *********************************************************************/
-double Menu::validateNumber(string rating, char min1, char max1, char min2, char max2) {
+double Menu::validateDecimal(string rating, char min1, char max1, char min2, char max2) {
     char choice[100];
     bool tooLong = false;
     bool decimalFound = false;
