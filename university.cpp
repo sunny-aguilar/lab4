@@ -218,7 +218,7 @@ void University::programFlow() {
 
                 while (getline(inFile, data)) {
                     count++;
-
+//                    cout << data << endl;
                     if (count == 1) {
                         name = data;
                     }
@@ -227,15 +227,33 @@ void University::programFlow() {
                     }
                     if (count == 3) {
                         size = stoi(data);
-                        cout << "Count 3 " << data << endl;
-//                        cout << stoi(data);
-                        count = -1;
+//                        cout << "Count 3 " << data << endl;
+                        count = 0;
                         addBuilding(name, size, address);
                     }
                 }
+                cout << "\nBuildings have been added to the OSU database\n\n";
 
-                printBuildingInfo();
+                // save building file list
+                ofstream outFile;
 
+                // request output file name for each paragraph
+                cout << "\nEnter a file name to save building data (i.e. build_list.txt):\n";
+                cout << ">> ";
+                cin >> outFileName;
+
+                // create/overwrite output file object
+                outFile.open(outFileName);
+
+                for (Building val: buildings) {
+                    outFile << val.getBuildingName() << endl;
+                    outFile << val.getBuildingAddress() << endl;
+                    outFile << val.getBuildingSize() << endl;
+                }
+
+
+                // close output file
+                outFile.close();
 
             }
             else if (selection == 2) {
@@ -412,10 +430,10 @@ void University::printBuildingInfo() {
 ** Description:    adds two building objects inside of university
 *********************************************************************/
 void University::addTwoBuildings() {
-    addBuilding("Kelley Engineering Center", 152166,
-                    "110 SW PARK TERRACE\nCORVALLIS, OR 97331");
-    addBuilding("Memorial Union Building", 166177,
-                    "2501 SW JEFFERSON WAY\nCORVALLIS, OR 97331");
+    addBuilding("KELLEY ENGINEERING CENTER", 152166,
+                    "110 SW PARK TERRACE CORVALLIS, OR 97331");
+    addBuilding("MEMORIAL UNION BUILDING", 166177,
+                    "2501 SW JEFFERSON WAY CORVALLIS, OR 97331");
 }
 
 /*********************************************************************
