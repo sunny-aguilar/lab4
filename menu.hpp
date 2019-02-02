@@ -29,6 +29,7 @@ public:
     void personMenu();
     void addMorePeople();
     void workMenu(int totalPersons, vector<string> vect);
+    void menuReadFile();
     void backToMainMenu();
     void exitMenu();
     int validateNumber(int min, int max);

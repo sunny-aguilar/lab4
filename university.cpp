@@ -49,7 +49,7 @@ void University::startSim() {
 void University::programFlow() {
     // create constants and bool value
     const int MENU_MIN = 1;             // control menu selection
-    const int MENU_MAX = 5;             // control menu selection
+    const int MENU_MAX = 6;             // control menu selection
     bool repeatMenu = true;             // control menu
 
     // loop controls menu
@@ -183,6 +183,39 @@ void University::programFlow() {
 
         }
         else if (menu.getSelection() == 5) {
+            // read in data from file
+            menu.menuReadFile();
+
+            int selection = menu.validateNumber(1,5);
+            if (selection == 1) {
+                // add buildings from file
+
+
+
+
+            }
+            else if (selection == 2) {
+                // add students from file
+
+
+
+
+            }
+            else if (selection == 3) {
+                // add instructors from file
+
+                
+            }
+            else if (selection == 4) {
+                // exit to main menu
+
+
+            }
+            else {
+                cout << "Unable to determine file to read!\n";
+            }
+        }
+        else if (menu.getSelection() == 6) {
             // user menu option 4 (exit program)
             repeatMenu = false;
         }

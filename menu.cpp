@@ -31,7 +31,8 @@ void Menu::mainMenu() {
     cout << "2. Print Student & Staff Info\n";
     cout << "3. Choose a Person to do Work\n";
     cout << "4. EXTRA CREDIT - Add More People\n";
-    cout << "5. Exit the Program\n";
+    cout << "5. EXTRA CREDIT - Read Data From File\n";
+    cout << "6. Exit the Program\n";
     cout << ">> ";
 }
 
@@ -70,6 +71,29 @@ void Menu::workMenu(int totalPersons, vector<string> vect) {
     }
 }
 
+/*********************************************************************
+** Description:     prompts user to read in info from file
+*********************************************************************/
+void Menu::menuReadFile() {
+    cout << "1. Upload Buildings\n";
+    cout << "2. Upload Students\n";
+    cout << "3. Upload Instructors\n";
+    cout << "4. Exit Program\n";
+    cout << ">> ";
+}
+
+/*********************************************************************
+** Description:     prompts user to read in info from file
+*********************************************************************/
+void Menu::menuReadStudents() {
+    cout << "1. Upload\n";
+    cout << "2. Enter 2 to Exit Program\n";
+    cout << ">> ";
+}
+
+/*********************************************************************
+** Description:     prompts user to go back to main menu or exit
+*********************************************************************/
 void Menu::backToMainMenu() {
     cout << "1. Enter 1 for Main Menu\n";
     cout << "2. Enter 2 to Exit Program\n";
