@@ -175,8 +175,11 @@ double Menu::validateNumber(string rating, char min1, char max1, char min2, char
 
         // check if decimal found in user input
         if (choice[1] == '.') {
-            cout << "ERROR - You must enter a decimal value\n";
+
             decimalFound = true;
+        }
+        else {
+            cout << "ERROR - You must enter a decimal value\n";
         }
 
         // check range
