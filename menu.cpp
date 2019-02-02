@@ -179,7 +179,7 @@ double Menu::validateNumber(string rating, char min1, char max1, char min2, char
         }
 
         // check range
-        if (choice[0] >= 48 && choice[0] <= 52) {
+        if (choice[0] >= 48 && choice[0] <= max2) {
             decOneRange = true;
             // if user has perfect rating, limit decimal value to 0
             if (choice[0] == max2) {
