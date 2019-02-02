@@ -142,7 +142,7 @@ void University::programFlow() {
                 // get student GPA
                 cout << "Enter the student's G.P.A (0.0 - 4.0)\n";
                 cout << ">> ";
-                gpa = menu.validateNumber("GPA",0,4,0,9);
+                gpa = menu.validateNumber("GPA",48,52,48,57);
 
                 // get student age
                 cout << "Enter Student's Age\n";
@@ -169,7 +169,7 @@ void University::programFlow() {
                 // get Instructor rating
                 cout << "Enter the Instructor's Rating (0.0 - 5.0)\n";
                 cout << ">> ";
-                rating = menu.validateNumber("Rating",0,5,0,9);
+                rating = menu.validateNumber("Rating",48,53,48,57);
 
                 // get Instructor age
                 cout << "Enter Instructor's Age\n";

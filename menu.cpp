@@ -168,9 +168,9 @@ double Menu::validateNumber(string rating, char min1, char max1, char min2, char
         cin.getline(choice, 100);
 
         // check if value entered is longer than 3 characters 0.0
-        if (strlen(choice) > 3) {
+        if ((strlen(choice) > 3) || (strlen(choice) < 3)) {
             tooLong = true;
-            cout << rating << " entered is too long\n";
+            cout << rating << " format should be 0.0 - " << max1 << "." << "0\n";
         }
 
         // check if decimal found in user input
@@ -179,10 +179,10 @@ double Menu::validateNumber(string rating, char min1, char max1, char min2, char
         }
 
         // check range
-        if (choice[0] >= 48 && choice[0] <= max2) {
+        if (choice[0] >= 48 && choice[0] <= max1) {
             decOneRange = true;
             // if user has perfect rating, limit decimal value to 0
-            if (choice[0] == max2) {
+            if (choice[0] == max1) {
                 min2 = 48;
                 max2 = 48;
                 perfectScore = true;
@@ -190,13 +190,13 @@ double Menu::validateNumber(string rating, char min1, char max1, char min2, char
         }
 
         // let user know that GPA/Rating cannot exceed limits (4.0/5.0)
-        if (perfectScore && (choice[2] > min2)) {
+        if (perfectScore && (choice[2] > 48)) {
             cout << rating << " entered cannot exceed 4.0 for students and";
             cout << " 5.0 for Instructors\n";
             decTwoRange = false;
         }
         else {
-            if (choice[2] >= 48 && choice[2] <= 57) {
+            if (choice[2] >= min2 && choice[2] <= max2) {
                 decTwoRange = true;
             }
 
