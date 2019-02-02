@@ -145,7 +145,7 @@ int Menu::validateNumber(int min, int max) {
 ** Description:     general validator where the parameters are the
 **                  min and max numbers acceptable
 *********************************************************************/
-double Menu::validateNumber(char min1, char max1, char min2, char max2) {
+double Menu::validateNumber(string rating, char min1, char max1, char min2, char max2) {
     char choice[100];
     bool tooLong = false;
     bool decimalFound = false;
@@ -164,13 +164,13 @@ double Menu::validateNumber(char min1, char max1, char min2, char max2) {
         perfectScore = false;
 
         // get user value
-        cout << "Enter value: ";
+        cout << "Enter " << rating <<  ": ";
         cin.getline(choice, 100);
 
         // check if value entered is longer than 3 characters 0.0
         if (strlen(choice) > 3 && !tooLong) {
             tooLong = true;
-            cout << "Value entered is too long\n";
+            cout << rating << " entered is too long\n";
         }
 
         // check if decimal found in user input
@@ -181,8 +181,8 @@ double Menu::validateNumber(char min1, char max1, char min2, char max2) {
         // check range
         if (choice[0] >= 48 && choice[0] <= 52) {
             decOneRange = true;
-            // if user has perfect GPA, limit decimal value to 0
-            if (choice[0] == 52) {
+            // if user has perfect rating, limit decimal value to 0
+            if (choice[0] == max2) {
                 min2 = 48;
                 max2 = 48;
                 perfectScore = true;
@@ -191,8 +191,8 @@ double Menu::validateNumber(char min1, char max1, char min2, char max2) {
 
         // let user know that GPA/Rating cannot exceed limits (4.0/5.0)
         if (perfectScore && (choice[2] > min2)) {
-            cout << "Value entered cannot exceed 4.0 for students and";
-            cout << " 5.0 for professors\n";
+            cout << rating << " entered cannot exceed 4.0 for students and";
+            cout << " 5.0 for Instructors\n";
             decTwoRange = false;
         }
         else {
@@ -201,11 +201,12 @@ double Menu::validateNumber(char min1, char max1, char min2, char max2) {
             }
 
             if (tooLong) {
-                cout << "Value format must be be entered as 0.0\n";
+                cout << rating << " format must be be entered as 0.0\n";
             }
 
             if (!decOneRange || !decTwoRange) {
-                cout << "Value entered is not within acceptable range\n";
+                cout << "Value entered cannot exceed 4.0 for Students and";
+                cout << " 5.0 for Instructors\n";
             }
         }
 

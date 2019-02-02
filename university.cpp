@@ -133,32 +133,52 @@ void University::programFlow() {
                 string name;
                 int age;
 
-                cout << "Add Student:\n";
-                cout << "Enter the students G.P.A (0.0 - 4.0)\n";
-                cout << ">> ";
-                gpa = menu.validateNumber(0,4,0,9);
-
+                // get student name
+                cout << "Add Student to System:\n";
                 cout << "Enter Student Name\n";
                 cout << ">> ";
                 getline(cin, name);
 
-                cout << "Enter Student Age\n";
+                // get student GPA
+                cout << "Enter the student's G.P.A (0.0 - 4.0)\n";
+                cout << ">> ";
+                gpa = menu.validateNumber("GPA",0,4,0,9);
+
+                // get student age
+                cout << "Enter Student's Age\n";
                 cout << ">> ";
                 age = menu.validateNumber(14, 100);
 
+                // add student in array
                 Person *s = new Student(gpa, name, age);
                 person.push_back(s);
 
             }
             else if (menu.getSelection() == 2) {
                 // user selects to add instructors
+                double rating = 0.0;
+                string name;
+                int age;
 
+                // get Instructor name
+                cout << "Add Instructor to System:\n";
+                cout << "Enter Instructor's Name\n";
+                cout << ">> ";
+                getline(cin, name);
 
+                // get Instructor rating
+                cout << "Enter the Instructor's Rating (0.0 - 5.0)\n";
+                cout << ">> ";
+                rating = menu.validateNumber("Rating",0,5,0,9);
 
+                // get Instructor age
+                cout << "Enter Instructor's Age\n";
+                cout << ">> ";
+                age = menu.validateNumber(28, 100);
 
-
-
-
+                // add Instructor in array
+                Person *s = new Instructor(rating, name, age);
+                person.push_back(s);
             }
 
         }
