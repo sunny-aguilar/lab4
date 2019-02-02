@@ -75,10 +75,11 @@ void Menu::workMenu(int totalPersons, vector<string> vect) {
 ** Description:     prompts user to read in info from file
 *********************************************************************/
 void Menu::menuReadFile() {
+    cout << "Upload University Data\n";
     cout << "1. Upload Buildings\n";
     cout << "2. Upload Students\n";
     cout << "3. Upload Instructors\n";
-    cout << "4. Exit Program\n";
+    cout << "4. Back to Main Menu\n";
     cout << ">> ";
 }
 

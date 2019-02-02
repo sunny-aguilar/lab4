@@ -194,21 +194,57 @@ void University::programFlow() {
             int selection = menu.validateNumber(1,5);
             if (selection == 1) {
                 // add buildings from file
-                cout << "Enter Building File Name\n";
+                cout << "Enter Building File Name (i.e. building_list.txt)\n";
 
+                // loop - ask user for file name if incorrect
+                do {
+                    cin >> fileName;                        // building_list.txt
+                    inFile.open(fileName);                  // input file data from building_list.txt
+                    if (inFile.fail())
+                        cout << "File not found! "          // request file name if not found
+                             << "Enter a file name:\n";
+                } while (inFile.fail());                    // if file not found, repeat loop
+
+                // confirm input file opened
+                cout << "Building file successfully opened\n";
+
+
+                // building data variables
+                string data;
+                string name;
+                string address;
+                int size;
+                int count = 0;
+
+                while (getline(inFile, data)) {
+                    count++;
+                    cout << data << endl;
+                    if (count == 1) {
+                        name = data;
+                    }
+                    if (count == 2) {
+                        address = data;
+                    }
+                    if (count == 3) {
+                        size = stoi(data);
+                        count = 0;
+                        addBuilding(name, size, address);
+                    }
+                }
 
 
             }
             else if (selection == 2) {
                 // add students from file
-                cout << "Enter Student File Name\n";
+                cout << "Enter Student File Name (i.e. student_list.txt)\n";
 
 
 
             }
             else if (selection == 3) {
                 // add instructors from file
-                cout << "Enter Instructor File Name\n";
+                cout << "Enter Instructor File Name (i.e. instructor_list.txt)\n";
+
 
             }
             else if (selection == 4) {
