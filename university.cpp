@@ -123,24 +123,41 @@ void University::programFlow() {
                 repeatMenu = false;
             }
         }
-        else if (menu.getSelection() == 5) {
+        else if (menu.getSelection() == 4) {
             // display menu to add more people
             menu.addMorePeople();
             menu.setSelection( menu.validateNumber(1,2) );
             if (menu.getSelection() == 1) {
                 // user selects to add students
-                double studentGPA = 0.0;
+                double gpa = 0.0;
+                string name;
+                int age;
 
                 cout << "Add Student:\n";
                 cout << "Enter the students G.P.A (0.0 - 4.0)\n";
-                studentGPA = menu.validateNumber(0.0, 4.0);
-                
+                cout << ">> ";
+                gpa = menu.validateNumber(0,4,0,9);
 
+                cout << "Enter Student Name\n";
+                cout << ">> ";
+                getline(cin, name);
 
+                cout << "Enter Student Age\n";
+                cout << ">> ";
+                age = menu.validateNumber(14, 100);
+
+                Person *s = new Student(gpa, name, age);
+                person.push_back(s);
 
             }
             else if (menu.getSelection() == 2) {
                 // user selects to add instructors
+
+
+
+
+
+
 
             }
 

@@ -145,6 +145,78 @@ int Menu::validateNumber(int min, int max) {
 ** Description:     general validator where the parameters are the
 **                  min and max numbers acceptable
 *********************************************************************/
-int Menu::validateNumber(double min, double max) {
-    if (typeof())
+double Menu::validateNumber(char min1, char max1, char min2, char max2) {
+    char choice[100];
+    bool tooLong = false;
+    bool decimalFound = false;
+    bool decOneRange = false;
+    bool decTwoRange = false;
+    bool perfectScore = false;
+    std::stringstream convert;
+    double validatedNumber = 0.0;
+
+    do {
+        // reset bool values
+        tooLong = false;
+        decimalFound = false;
+        decOneRange = false;
+        decTwoRange = false;
+        perfectScore = false;
+
+        // get user value
+        cout << "Enter value: ";
+        cin.getline(choice, 100);
+
+        // check if value entered is longer than 3 characters 0.0
+        if (strlen(choice) > 3 && !tooLong) {
+            tooLong = true;
+            cout << "Value entered is too long\n";
+        }
+
+        // check if decimal found in user input
+        if (choice[1] == '.') {
+            decimalFound = true;
+        }
+
+        // check range
+        if (choice[0] >= 48 && choice[0] <= 52) {
+            decOneRange = true;
+            // if user has perfect GPA, limit decimal value to 0
+            if (choice[0] == 52) {
+                min2 = 48;
+                max2 = 48;
+                perfectScore = true;
+            }
+        }
+
+        // let user know that GPA/Rating cannot exceed limits (4.0/5.0)
+        if (perfectScore && (choice[2] > min2)) {
+            cout << "Value entered cannot exceed 4.0 for students and";
+            cout << " 5.0 for professors\n";
+            decTwoRange = false;
+        }
+        else {
+            if (choice[2] >= 48 && choice[2] <= 57) {
+                decTwoRange = true;
+            }
+
+            if (tooLong) {
+                cout << "Value format must be be entered as 0.0\n";
+            }
+
+            if (!decOneRange || !decTwoRange) {
+                cout << "Value entered is not within acceptable range\n";
+            }
+        }
+
+        // return validated decimal number
+        if (!tooLong && decimalFound && decOneRange && decTwoRange) {
+            convert << choice;
+            convert >> validatedNumber;
+        }
+
+    } while (tooLong || !decimalFound || !decOneRange || !decTwoRange);
+
+    // return validated double
+    return validatedNumber;
 }
