@@ -168,7 +168,7 @@ double Menu::validateNumber(string rating, char min1, char max1, char min2, char
         cin.getline(choice, 100);
 
         // check if value entered is longer than 3 characters 0.0
-        if (strlen(choice) > 3 && !tooLong) {
+        if (strlen(choice) > 3) {
             tooLong = true;
             cout << rating << " entered is too long\n";
         }
