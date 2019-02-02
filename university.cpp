@@ -218,7 +218,7 @@ void University::programFlow() {
 
                 while (getline(inFile, data)) {
                     count++;
-                    cout << data << endl;
+
                     if (count == 1) {
                         name = data;
                     }
@@ -227,10 +227,14 @@ void University::programFlow() {
                     }
                     if (count == 3) {
                         size = stoi(data);
-                        count = 0;
+                        cout << "Count 3 " << data << endl;
+//                        cout << stoi(data);
+                        count = -1;
                         addBuilding(name, size, address);
                     }
                 }
+
+                printBuildingInfo();
 
 
             }
