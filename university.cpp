@@ -186,7 +186,7 @@ void University::programFlow() {
             // read in data from file
             menu.menuReadFile();
 
-            // creating necessary variables
+            // create necessary variables
             string fileName;
             ifstream inFile;
             string outFileName;
@@ -208,14 +208,14 @@ void University::programFlow() {
                 // confirm input file opened
                 cout << "Building file successfully opened\n";
 
-
-                // building data variables
+                // data variables for buildings
                 string data;
                 string name;
                 string address;
                 int size;
                 int count = 0;
 
+                // add building file to OSU database
                 while (getline(inFile, data)) {
                     count++;
 //                    cout << data << endl;
@@ -245,12 +245,12 @@ void University::programFlow() {
                 // create/overwrite output file object
                 outFile.open(outFileName);
 
+                // output building info to file
                 for (Building val: buildings) {
                     outFile << val.getBuildingName() << endl;
                     outFile << val.getBuildingAddress() << endl;
                     outFile << val.getBuildingSize() << endl;
                 }
-
 
                 // close output file
                 outFile.close();
