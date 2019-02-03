@@ -45,6 +45,7 @@ public:
     void addInstructor(double rating, string name, int age);
     void addPersons();
     void addMorePersons();
+    void readFromFile();
     double generateDouble(int max);
     int generateAge(int selectType);
     Person *getPersonPointer(int number);

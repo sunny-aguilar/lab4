@@ -445,6 +445,18 @@ void University::addMorePersons() {
 }
 
 /*********************************************************************
+** Description:     EXTRA CREDIT - allows a user to add buildings and
+**                  persons from a text file and output it to a text
+**                  file. Three different files are used to read in
+**                  the data for the buildings, students, and
+**                  instructors. Three different files are outputted
+**                  for the buildings, students and instructors.
+**                  Building file name: building_list.txt
+**                  Student file name: student_list.txt
+**                  Instructor filename: instructor_list.txt
+*********************************************************************/
+
+/*********************************************************************
 ** Description:     returns a random number from 0 to a max value
 **                  given by the parameter passed in; used for getting
 **                  a GPA and or rating.
