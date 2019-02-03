@@ -277,7 +277,7 @@ void University::programFlow() {
                 string data;
                 string name;
                 double gpa = 0.0;
-                double age = 0;
+                int age = 0;
                 int count = 0;
 
                 // add student file to OSU database
@@ -290,7 +290,7 @@ void University::programFlow() {
                         gpa = stod(data);
                     }
                     if (count == 3) {
-                        age = stod(data);
+                        age = stoi(data);
                         count = 0;
                         addStudent(gpa, name, age);
                     }
@@ -346,8 +346,8 @@ void University::programFlow() {
                 // add instructor file to OSU database
                 while (getline(inFile, data)) {
                     count++;
+                    cout << data << endl;
                     if (count == 1) {
-                        cout << data << endl;
                         name = data;
                     }
                     if (count == 2) {
@@ -356,26 +356,16 @@ void University::programFlow() {
                     if (count == 3) {
                         age = stoi(data);
                         count = 0;
-                        addStudent(rating, name, age);
+                        addInstructor(rating, name, age);
                     }
                 }
                 cout << "\nInstructors have been added to the OSU database\n\n";
-
-                for (int x = 0; x < person.size(); x++) {
-                    cout << std::fixed << std::setprecision(1);
-                    if (dynamic_cast<Instructor*>(getPersonPointer(x))) {
-                        cout << "Instructor Name: " << getPersonPointer(x)->getName() << endl;
-                        cout << "Instructor Rating: " << getPersonPointer(x)->getRating() << endl;
-                        cout << "Instructor Age: " << getPersonPointer(x)->getAge() << endl;
-                    }
-                    cout << endl;
-                }
-
+                
                 // save instructor file list
                 ofstream outFile;
 
                 // request output file name for each paragraph
-                cout << "\nEnter a file name to save student data (i.e. updated_instructors.txt):\n";
+                cout << "\nEnter a file name to save instructor data (i.e. updated_instructors.txt):\n";
                 cout << ">> ";
                 cin >> outFileName;
 
@@ -393,7 +383,6 @@ void University::programFlow() {
 
                 // close output file
                 outFile.close();
-
             }
             else if (selection == 4) {
                 // exit to main menu
