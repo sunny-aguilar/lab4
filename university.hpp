@@ -32,6 +32,8 @@ using std::ifstream;
 using std::ofstream;
 using std::cout;
 using std::endl;
+using std::setprecision;
+using std::fixed;
 
 class University {
 public:

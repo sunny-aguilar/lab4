@@ -312,7 +312,7 @@ void University::programFlow() {
                 for (int student = 0; student < person.size(); student++) {
                     if (dynamic_cast<Student*>(getPersonPointer(student))) {
                         outFile << getPersonPointer(student)->getName() << endl;
-                        outFile << getPersonPointer(student)->getGPA() << endl;
+                        outFile << fixed << setprecision(1) << getPersonPointer(student)->getGPA() << endl;
                         outFile << getPersonPointer(student)->getAge() << endl;
                     }
                 }
