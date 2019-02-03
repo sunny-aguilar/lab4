@@ -261,13 +261,17 @@ void University::programFlow() {
                 // add students from file
                 cout << "Enter Student File Name (i.e. student_list.txt)\n";
 
-                // create necessary variables
-                string fileName;
-                ifstream inFile;
-                string outFileName;
+                // loop - ask user for file name if incorrect
+                do {
+                    cin >> fileName;                        // student_list.txt
+                    inFile.open(fileName);                  // input file data from student_list.txt
+                    if (inFile.fail())
+                        cout << "File not found! "          // request file name if not found
+                             << "Enter a file name:\n";
+                } while (inFile.fail());                    // if file not found, repeat loop
 
-                int selection = menu.validateNumber(1,5);
-
+                // confirm input file opened
+                cout << "Student file successfully opened\n";
 
 
             }
