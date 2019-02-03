@@ -319,14 +319,12 @@ void University::programFlow() {
 
                 // close output file
                 outFile.close();
-
-
             }
             else if (selection == 3) {
                 // add instructors from file
                 cout << "Enter Instructor File Name (i.e. instructor_list.txt)\n";
 
-
+                // loop - ask user for file name if incorrect
 
 
 
