@@ -71,15 +71,15 @@ void University::programFlow() {
             doWork();
         }
         else if (menu.getSelection() == 4) {
-            // user selects menu option two - Extra Credit: Add more people
+            // user selects menu option four - Extra Credit: Add more people
             addMorePersons();
         }
         else if (menu.getSelection() == 5) {
-            // // user selects menu option two - Extra Credit: Read data from file
+            // // user selects menu option five - Extra Credit: Read data from file
             readFromFile();
         }
         else if (menu.getSelection() == 6) {
-            // user menu option 4 (exit program)
+            // user menu option 4 - (exit program)
             repeatMenu = false;
         }
         else {
