@@ -340,25 +340,36 @@ void University::programFlow() {
                 string data;
                 string name;
                 double rating = 0.0;
-                double age = 0;
+                int age = 0;
                 int count = 0;
 
                 // add instructor file to OSU database
                 while (getline(inFile, data)) {
                     count++;
                     if (count == 1) {
+                        cout << data << endl;
                         name = data;
                     }
                     if (count == 2) {
                         rating = stod(data);
                     }
                     if (count == 3) {
-                        age = stod(data);
+                        age = stoi(data);
                         count = 0;
                         addStudent(rating, name, age);
                     }
                 }
                 cout << "\nInstructors have been added to the OSU database\n\n";
+
+                for (int x = 0; x < person.size(); x++) {
+                    cout << std::fixed << std::setprecision(1);
+                    if (dynamic_cast<Instructor*>(getPersonPointer(x))) {
+                        cout << "Instructor Name: " << getPersonPointer(x)->getName() << endl;
+                        cout << "Instructor Rating: " << getPersonPointer(x)->getRating() << endl;
+                        cout << "Instructor Age: " << getPersonPointer(x)->getAge() << endl;
+                    }
+                    cout << endl;
+                }
 
                 // save instructor file list
                 ofstream outFile;
