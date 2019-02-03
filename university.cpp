@@ -239,7 +239,7 @@ void University::programFlow() {
                 ofstream outFile;
 
                 // request output file name for each paragraph
-                cout << "\nEnter a file name to save building data (i.e. build_list.txt):\n";
+                cout << "\nEnter a file name to save building data (i.e. updated_buildings.txt):\n";
                 cout << ">> ";
                 cin >> outFileName;
 
@@ -276,9 +276,8 @@ void University::programFlow() {
                 // data variables for students
                 string data;
                 string name;
-                double gpa;
-                double age;
-                int size;
+                double gpa = 0.0;
+                double age = 0;
                 int count = 0;
 
                 // add building file to OSU database
@@ -292,14 +291,32 @@ void University::programFlow() {
                     }
                     if (count == 3) {
                         age = stod(data);
-//                        cout << "Count 3 " << data << endl;
                         count = 0;
                         addStudent(gpa, name, age);
                     }
                 }
+                cout << "\nStudents have been added to the OSU database\n\n";
 
+                // save building file list
+                ofstream outFile;
 
+                // request output file name for each paragraph
+                cout << "\nEnter a file name to save student data (i.e. updated_students.txt):\n";
+                cout << ">> ";
+                cin >> outFileName;
 
+                // create/overwrite output file object
+                outFile.open(outFileName);
+
+                // output building info to file
+                for (Building val: buildings) {
+                    outFile << val.getBuildingName() << endl;
+                    outFile << val.getBuildingAddress() << endl;
+                    outFile << val.getBuildingSize() << endl;
+                }
+
+                // close output file
+                outFile.close();
 
 
             }
