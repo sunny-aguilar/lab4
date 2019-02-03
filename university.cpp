@@ -58,78 +58,25 @@ void University::programFlow() {
         menu.mainMenu();
         menu.setSelection( menu.validateNumber(MENU_MIN, MENU_MAX) );
 
-        // select next menu option
+        // select next menu option - Print Building Info
         if (menu.getSelection() == 1) {
-            // show menu building
-            menu.buildingMenu();
-            // show buildings
-            printBuildingInfo();
-            // show menu again & validate user input
-            menu.backToMainMenu();
-            menu.setSelection( menu.validateNumber(1,2) );
-            if (menu.getSelection() == 1) {
-                // user selects main menu
-                repeatMenu = true;
-            }
-            else if (menu.getSelection() == 2) {
-                // user selects to exit program
-                repeatMenu = false;
-            }
+            printBuildings();
         }
         else if (menu.getSelection() == 2) {
-            // user selects menu option two
-            // show menu and display persons
-            menu.personMenu();
-            displayPerson();
-            // display menu & validate
-            menu.backToMainMenu();
-            menu.setSelection( menu.validateNumber(1,2) );
-            if (menu.getSelection() == 1) {
-                // user selects main menu
-                repeatMenu = true;
-            }
-            else if (menu.getSelection() == 2) {
-                // user selects to exit program
-                repeatMenu = false;
-            }
+            // user selects menu option two - Print student & staff info
+            printPeople();
         }
         else if (menu.getSelection() == 3) {
-            // user selects menu option three
-            // create an array to hold person names and sent it to
-            // the menu object to display names of people to do work
-            int totalPersons = getTotalPersons();
-            vector<string> personNames;
-
-            // store names in array
-            for (int x = 0; x < getTotalPersons(); x++) {
-                personNames.push_back(getPersonPointer(x)->getName());
-            }
-            // show menu with people to do work & validate user input
-            menu.workMenu(totalPersons, personNames);
-            menu.setSelection( menu.validateNumber(1,2) );
-
-            // show selected person doing work
-            displayPersonWorking( menu.getSelection() - 1 );
-
-            // display menu & validate
-            menu.backToMainMenu();
-            menu.setSelection( menu.validateNumber(1,2) );
-            if (menu.getSelection() == 1) {
-                // user selects main menu
-                repeatMenu = true;
-            }
-            else if (menu.getSelection() == 2) {
-                // user selects to exit program
-                repeatMenu = false;
-            }
+            // user selects menu option three - Choose a person to do work
+            doWork();
         }
         else if (menu.getSelection() == 4) {
-            // display menu to add more people
+            // user selects menu option two - Extra Credit: Add more people
             addMorePersons();
         }
         else if (menu.getSelection() == 5) {
+            // // user selects menu option two - Extra Credit: Read data from file
             readFromFile();
-
         }
         else if (menu.getSelection() == 6) {
             // user menu option 4 (exit program)
@@ -169,6 +116,48 @@ void University::addStudent(double gpa, string name, int age) {
 void University::addInstructor(double rating, string name, int age) {
     Instructor *i = new Instructor(rating, name, age);
     person.push_back(i);
+}
+
+/*********************************************************************
+** Description:     prints building information
+*********************************************************************/
+void University::printBuildings() {
+    // show menu building
+    menu.buildingMenu();
+    // show buildings
+    printBuildingInfo();
+}
+
+/*********************************************************************
+** Description:     prints students and instructor info
+*********************************************************************/
+void University::printPeople() {
+    // show menu and display persons
+    menu.personMenu();
+    displayPerson();
+}
+
+/*********************************************************************
+** Description:     function chooses a person to do work. Person
+**                  chosen is polymorphic since the context of the
+**                  pointer will determine the virtual function chosen
+*********************************************************************/
+void University::doWork() {
+    // create an array to hold person names and sent it to
+    // the menu object to display names of people to do work
+    int totalPersons = getTotalPersons();
+    vector<string> personNames;
+
+    // store names in array
+    for (int x = 0; x < getTotalPersons(); x++) {
+        personNames.push_back(getPersonPointer(x)->getName());
+    }
+    // show menu with people to do work & validate user input
+    menu.workMenu(totalPersons, personNames);
+    menu.setSelection( menu.validateNumber(1,2) );
+
+    // show selected person doing work
+    displayPersonWorking( menu.getSelection() - 1 );
 }
 
 /*********************************************************************

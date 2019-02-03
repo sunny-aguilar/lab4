@@ -43,6 +43,9 @@ public:
     void programFlow();
     void addStudent(double gpa, string name, int age);
     void addInstructor(double rating, string name, int age);
+    void printBuildings();
+    void printPeople();
+    void doWork();
     void addPersons();
     void addMorePersons();
     void readFromFile();
