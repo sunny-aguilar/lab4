@@ -280,7 +280,7 @@ void University::programFlow() {
                 double age = 0;
                 int count = 0;
 
-                // add building file to OSU database
+                // add student file to OSU database
                 while (getline(inFile, data)) {
                     count++;
                     if (count == 1) {
@@ -325,8 +325,23 @@ void University::programFlow() {
                 cout << "Enter Instructor File Name (i.e. instructor_list.txt)\n";
 
                 // loop - ask user for file name if incorrect
+                do {
+                    cin >> fileName;                        // instructor_list.txt
+                    inFile.open(fileName);                  // input file data from instructor_list.txt
+                    if (inFile.fail())
+                        cout << "File not found! "          // request file name if not found
+                             << "Enter a file name:\n";
+                } while (inFile.fail());                    // if file not found, repeat loop
 
+                // confirm input file opened
+                cout << "Instructor file successfully opened\n";
 
+                // data variables for students
+                string data;
+                string name;
+                double rating = 0.0;
+                double age = 0;
+                int count = 0;
 
 
             }
