@@ -180,7 +180,6 @@ void University::programFlow() {
                 Person *s = new Instructor(rating, name, age);
                 person.push_back(s);
             }
-
         }
         else if (menu.getSelection() == 5) {
             // read in data from file
@@ -219,7 +218,6 @@ void University::programFlow() {
                 // add building file to OSU database
                 while (getline(inFile, data)) {
                     count++;
-//                    cout << data << endl;
                     if (count == 1) {
                         name = data;
                     }
@@ -228,7 +226,6 @@ void University::programFlow() {
                     }
                     if (count == 3) {
                         size = stoi(data);
-//                        cout << "Count 3 " << data << endl;
                         count = 0;
                         addBuilding(name, size, address);
                     }
