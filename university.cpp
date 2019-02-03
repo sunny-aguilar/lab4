@@ -309,10 +309,12 @@ void University::programFlow() {
                 outFile.open(outFileName);
 
                 // output building info to file
-                for (Building val: buildings) {
-                    outFile << val.getBuildingName() << endl;
-                    outFile << val.getBuildingAddress() << endl;
-                    outFile << val.getBuildingSize() << endl;
+                for (int student = 0; student < person.size(); student++) {
+                    if (dynamic_cast<Student*>(getPersonPointer(student))) {
+                        outFile << getPersonPointer(student)->getName() << endl;
+                        outFile << getPersonPointer(student)->getGPA() << endl;
+                        outFile << getPersonPointer(student)->getAge() << endl;
+                    }
                 }
 
                 // close output file
