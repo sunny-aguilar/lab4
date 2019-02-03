@@ -308,7 +308,7 @@ void University::programFlow() {
                 // create/overwrite output file object
                 outFile.open(outFileName);
 
-                // output building info to file
+                // output student info to file
                 for (int student = 0; student < person.size(); student++) {
                     if (dynamic_cast<Student*>(getPersonPointer(student))) {
                         outFile << getPersonPointer(student)->getName() << endl;
@@ -363,9 +363,25 @@ void University::programFlow() {
                 // save instructor file list
                 ofstream outFile;
 
+                // request output file name for each paragraph
+                cout << "\nEnter a file name to save student data (i.e. updated_instructors.txt):\n";
+                cout << ">> ";
+                cin >> outFileName;
 
+                // create/overwrite output file object
+                outFile.open(outFileName);
 
+                // output instructor info to file
+                for (int instructor = 0; instructor < person.size(); instructor++) {
+                    if (dynamic_cast<Instructor*>(getPersonPointer(instructor))) {
+                        outFile << getPersonPointer(instructor)->getName() << endl;
+                        outFile << fixed << setprecision(1) << getPersonPointer(instructor)->getRating() << endl;
+                        outFile << getPersonPointer(instructor)->getAge() << endl;
+                    }
+                }
 
+                // close output file
+                outFile.close();
 
             }
             else if (selection == 4) {
