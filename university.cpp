@@ -297,7 +297,7 @@ void University::programFlow() {
                 }
                 cout << "\nStudents have been added to the OSU database\n\n";
 
-                // save building file list
+                // save student file list
                 ofstream outFile;
 
                 // request output file name for each paragraph
@@ -342,6 +342,29 @@ void University::programFlow() {
                 double rating = 0.0;
                 double age = 0;
                 int count = 0;
+
+                // add instructor file to OSU database
+                while (getline(inFile, data)) {
+                    count++;
+                    if (count == 1) {
+                        name = data;
+                    }
+                    if (count == 2) {
+                        rating = stod(data);
+                    }
+                    if (count == 3) {
+                        age = stod(data);
+                        count = 0;
+                        addStudent(rating, name, age);
+                    }
+                }
+                cout << "\nInstructors have been added to the OSU database\n\n";
+
+                // save instructor file list
+                ofstream outFile;
+
+
+
 
 
             }
