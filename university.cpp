@@ -346,7 +346,6 @@ void University::programFlow() {
                 // add instructor file to OSU database
                 while (getline(inFile, data)) {
                     count++;
-                    cout << data << endl;
                     if (count == 1) {
                         name = data;
                     }
@@ -360,7 +359,7 @@ void University::programFlow() {
                     }
                 }
                 cout << "\nInstructors have been added to the OSU database\n\n";
-                
+
                 // save instructor file list
                 ofstream outFile;
 
