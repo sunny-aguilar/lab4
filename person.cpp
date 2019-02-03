@@ -13,7 +13,7 @@
 /*********************************************************************
 ** Description:    default constructor that sets the data members
 *********************************************************************/
-Person::Person() : name{}, age{0} { }
+Person::Person() : name{}, age{0} {}
 
 /*********************************************************************
 ** Description:     2-arg constructor that sets the data member. Uses
