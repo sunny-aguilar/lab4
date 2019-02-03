@@ -191,6 +191,7 @@ void University::programFlow() {
             ifstream inFile;
             string outFileName;
 
+            // let user select which data to populate from file
             int selection = menu.validateNumber(1,5);
             if (selection == 1) {
                 // add buildings from file
@@ -260,12 +261,23 @@ void University::programFlow() {
                 // add students from file
                 cout << "Enter Student File Name (i.e. student_list.txt)\n";
 
+                // create necessary variables
+                string fileName;
+                ifstream inFile;
+                string outFileName;
+
+                int selection = menu.validateNumber(1,5);
+
 
 
             }
             else if (selection == 3) {
                 // add instructors from file
                 cout << "Enter Instructor File Name (i.e. instructor_list.txt)\n";
+
+
+
+
 
 
             }
