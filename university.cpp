@@ -273,6 +273,34 @@ void University::programFlow() {
                 // confirm input file opened
                 cout << "Student file successfully opened\n";
 
+                // data variables for students
+                string data;
+                string name;
+                double gpa;
+                double age;
+                int size;
+                int count = 0;
+
+                // add building file to OSU database
+                while (getline(inFile, data)) {
+                    count++;
+                    if (count == 1) {
+                        name = data;
+                    }
+                    if (count == 2) {
+                        gpa = stod(data);
+                    }
+                    if (count == 3) {
+                        age = stod(data);
+//                        cout << "Count 3 " << data << endl;
+                        count = 0;
+                        addStudent(gpa, name, age);
+                    }
+                }
+
+
+
+
 
             }
             else if (selection == 3) {
