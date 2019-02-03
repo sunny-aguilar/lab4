@@ -8,6 +8,10 @@
 **                  class) as private members. The Person class has
 **                  a hierarchy where the Student class and Instructor
 **                  class are derived from the Person class.
+**                  EXTRA CREDIT
+**                  - People can be added at runtime
+**                  - Files can be read in to add build/people info
+**                  - Files are outputted
 *********************************************************************/
 #include "university.hpp"
 #include "building.hpp"
