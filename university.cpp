@@ -128,212 +128,8 @@ void University::programFlow() {
             addMorePersons();
         }
         else if (menu.getSelection() == 5) {
-            // read in data from file
-            menu.menuReadFile();
+            readFromFile();
 
-            // create necessary variables
-            string fileName;
-            ifstream inFile;
-            string outFileName;
-
-            // let user select which data to populate from file
-            int selection = menu.validateNumber(1,5);
-            if (selection == 1) {
-                // add buildings from file
-                cout << "Enter Building File Name (i.e. building_list.txt)\n";
-
-                // loop - ask user for file name if incorrect
-                do {
-                    cin >> fileName;                        // building_list.txt
-                    inFile.open(fileName);                  // input file data from building_list.txt
-                    if (inFile.fail())
-                        cout << "File not found! "          // request file name if not found
-                             << "Enter a file name:\n";
-                } while (inFile.fail());                    // if file not found, repeat loop
-
-                // confirm input file opened
-                cout << "Building file successfully opened\n";
-
-                // data variables for buildings
-                string data;
-                string name;
-                string address;
-                int size;
-                int count = 0;
-
-                // add building file to OSU database
-                while (getline(inFile, data)) {
-                    count++;
-                    if (count == 1) {
-                        name = data;
-                    }
-                    if (count == 2) {
-                        address = data;
-                    }
-                    if (count == 3) {
-                        size = stoi(data);
-                        count = 0;
-                        addBuilding(name, size, address);
-                    }
-                }
-                cout << "\nBuildings have been added to the OSU database\n\n";
-
-                // save building file list
-                ofstream outFile;
-
-                // request output file name for each paragraph
-                cout << "\nEnter a file name to save building data (i.e. updated_buildings.txt):\n";
-                cout << ">> ";
-                cin >> outFileName;
-
-                // create/overwrite output file object
-                outFile.open(outFileName);
-
-                // output building info to file
-                for (Building val: buildings) {
-                    outFile << val.getBuildingName() << endl;
-                    outFile << val.getBuildingAddress() << endl;
-                    outFile << val.getBuildingSize() << endl;
-                }
-
-                // close output file
-                outFile.close();
-
-            }
-            else if (selection == 2) {
-                // add students from file
-                cout << "Enter Student File Name (i.e. student_list.txt)\n";
-
-                // loop - ask user for file name if incorrect
-                do {
-                    cin >> fileName;                        // student_list.txt
-                    inFile.open(fileName);                  // input file data from student_list.txt
-                    if (inFile.fail())
-                        cout << "File not found! "          // request file name if not found
-                             << "Enter a file name:\n";
-                } while (inFile.fail());                    // if file not found, repeat loop
-
-                // confirm input file opened
-                cout << "Student file successfully opened\n";
-
-                // data variables for students
-                string data;
-                string name;
-                double gpa = 0.0;
-                int age = 0;
-                int count = 0;
-
-                // add student file to OSU database
-                while (getline(inFile, data)) {
-                    count++;
-                    if (count == 1) {
-                        name = data;
-                    }
-                    if (count == 2) {
-                        gpa = stod(data);
-                    }
-                    if (count == 3) {
-                        age = stoi(data);
-                        count = 0;
-                        addStudent(gpa, name, age);
-                    }
-                }
-                cout << "\nStudents have been added to the OSU database\n\n";
-
-                // save student file list
-                ofstream outFile;
-
-                // request output file name for each paragraph
-                cout << "\nEnter a file name to save student data (i.e. updated_students.txt):\n";
-                cout << ">> ";
-                cin >> outFileName;
-
-                // create/overwrite output file object
-                outFile.open(outFileName);
-
-                // output student info to file
-                for (int student = 0; student < person.size(); student++) {
-                    if (dynamic_cast<Student*>(getPersonPointer(student))) {
-                        outFile << getPersonPointer(student)->getName() << endl;
-                        outFile << fixed << setprecision(1) << getPersonPointer(student)->getGPA() << endl;
-                        outFile << getPersonPointer(student)->getAge() << endl;
-                    }
-                }
-
-                // close output file
-                outFile.close();
-            }
-            else if (selection == 3) {
-                // add instructors from file
-                cout << "Enter Instructor File Name (i.e. instructor_list.txt)\n";
-
-                // loop - ask user for file name if incorrect
-                do {
-                    cin >> fileName;                        // instructor_list.txt
-                    inFile.open(fileName);                  // input file data from instructor_list.txt
-                    if (inFile.fail())
-                        cout << "File not found! "          // request file name if not found
-                             << "Enter a file name:\n";
-                } while (inFile.fail());                    // if file not found, repeat loop
-
-                // confirm input file opened
-                cout << "Instructor file successfully opened\n";
-
-                // data variables for students
-                string data;
-                string name;
-                double rating = 0.0;
-                int age = 0;
-                int count = 0;
-
-                // add instructor file to OSU database
-                while (getline(inFile, data)) {
-                    count++;
-                    if (count == 1) {
-                        name = data;
-                    }
-                    if (count == 2) {
-                        rating = stod(data);
-                    }
-                    if (count == 3) {
-                        age = stoi(data);
-                        count = 0;
-                        addInstructor(rating, name, age);
-                    }
-                }
-                cout << "\nInstructors have been added to the OSU database\n\n";
-
-                // save instructor file list
-                ofstream outFile;
-
-                // request output file name for each paragraph
-                cout << "\nEnter a file name to save instructor data (i.e. updated_instructors.txt):\n";
-                cout << ">> ";
-                cin >> outFileName;
-
-                // create/overwrite output file object
-                outFile.open(outFileName);
-
-                // output instructor info to file
-                for (int instructor = 0; instructor < person.size(); instructor++) {
-                    if (dynamic_cast<Instructor*>(getPersonPointer(instructor))) {
-                        outFile << getPersonPointer(instructor)->getName() << endl;
-                        outFile << fixed << setprecision(1) << getPersonPointer(instructor)->getRating() << endl;
-                        outFile << getPersonPointer(instructor)->getAge() << endl;
-                    }
-                }
-
-                // close output file
-                outFile.close();
-            }
-            else if (selection == 4) {
-                // exit to main menu
-
-
-            }
-            else {
-                cout << "Unable to determine file to read!\n";
-            }
         }
         else if (menu.getSelection() == 6) {
             // user menu option 4 (exit program)
@@ -455,6 +251,214 @@ void University::addMorePersons() {
 **                  Student file name: student_list.txt
 **                  Instructor filename: instructor_list.txt
 *********************************************************************/
+void University::readFromFile() {
+    // read in data from file
+    menu.menuReadFile();
+
+    // create necessary variables
+    string fileName;
+    ifstream inFile;
+    string outFileName;
+
+    // let user select which data to populate from file
+    int selection = menu.validateNumber(1,5);
+    if (selection == 1) {
+        // add buildings from file
+        cout << "Enter Building File Name (i.e. building_list.txt)\n";
+
+        // loop - ask user for file name if incorrect
+        do {
+            cin >> fileName;                        // building_list.txt
+            inFile.open(fileName);                  // input file data from building_list.txt
+            if (inFile.fail())
+                cout << "File not found! "          // request file name if not found
+                     << "Enter a file name:\n";
+        } while (inFile.fail());                    // if file not found, repeat loop
+
+        // confirm input file opened
+        cout << "Building file successfully opened\n";
+
+        // data variables for buildings
+        string data;
+        string name;
+        string address;
+        int size;
+        int count = 0;
+
+        // add building file to OSU database
+        while (getline(inFile, data)) {
+            count++;
+            if (count == 1) {
+                name = data;
+            }
+            if (count == 2) {
+                address = data;
+            }
+            if (count == 3) {
+                size = stoi(data);
+                count = 0;
+                addBuilding(name, size, address);
+            }
+        }
+        cout << "\nBuildings have been added to the OSU database\n\n";
+
+        // save building file list
+        ofstream outFile;
+
+        // request output file name for each paragraph
+        cout << "\nEnter a file name to save building data (i.e. updated_buildings.txt):\n";
+        cout << ">> ";
+        cin >> outFileName;
+
+        // create/overwrite output file object
+        outFile.open(outFileName);
+
+        // output building info to file
+        for (Building val: buildings) {
+            outFile << val.getBuildingName() << endl;
+            outFile << val.getBuildingAddress() << endl;
+            outFile << val.getBuildingSize() << endl;
+        }
+
+        // close output file
+        outFile.close();
+
+    }
+    else if (selection == 2) {
+        // add students from file
+        cout << "Enter Student File Name (i.e. student_list.txt)\n";
+
+        // loop - ask user for file name if incorrect
+        do {
+            cin >> fileName;                        // student_list.txt
+            inFile.open(fileName);                  // input file data from student_list.txt
+            if (inFile.fail())
+                cout << "File not found! "          // request file name if not found
+                     << "Enter a file name:\n";
+        } while (inFile.fail());                    // if file not found, repeat loop
+
+        // confirm input file opened
+        cout << "Student file successfully opened\n";
+
+        // data variables for students
+        string data;
+        string name;
+        double gpa = 0.0;
+        int age = 0;
+        int count = 0;
+
+        // add student file to OSU database
+        while (getline(inFile, data)) {
+            count++;
+            if (count == 1) {
+                name = data;
+            }
+            if (count == 2) {
+                gpa = stod(data);
+            }
+            if (count == 3) {
+                age = stoi(data);
+                count = 0;
+                addStudent(gpa, name, age);
+            }
+        }
+        cout << "\nStudents have been added to the OSU database\n\n";
+
+        // save student file list
+        ofstream outFile;
+
+        // request output file name for each paragraph
+        cout << "\nEnter a file name to save student data (i.e. updated_students.txt):\n";
+        cout << ">> ";
+        cin >> outFileName;
+
+        // create/overwrite output file object
+        outFile.open(outFileName);
+
+        // output student info to file
+        for (int student = 0; student < person.size(); student++) {
+            if (dynamic_cast<Student*>(getPersonPointer(student))) {
+                outFile << getPersonPointer(student)->getName() << endl;
+                outFile << fixed << setprecision(1) << getPersonPointer(student)->getGPA() << endl;
+                outFile << getPersonPointer(student)->getAge() << endl;
+            }
+        }
+
+        // close output file
+        outFile.close();
+    }
+    else if (selection == 3) {
+        // add instructors from file
+        cout << "Enter Instructor File Name (i.e. instructor_list.txt)\n";
+
+        // loop - ask user for file name if incorrect
+        do {
+            cin >> fileName;                        // instructor_list.txt
+            inFile.open(fileName);                  // input file data from instructor_list.txt
+            if (inFile.fail())
+                cout << "File not found! "          // request file name if not found
+                     << "Enter a file name:\n";
+        } while (inFile.fail());                    // if file not found, repeat loop
+
+        // confirm input file opened
+        cout << "Instructor file successfully opened\n";
+
+        // data variables for students
+        string data;
+        string name;
+        double rating = 0.0;
+        int age = 0;
+        int count = 0;
+
+        // add instructor file to OSU database
+        while (getline(inFile, data)) {
+            count++;
+            if (count == 1) {
+                name = data;
+            }
+            if (count == 2) {
+                rating = stod(data);
+            }
+            if (count == 3) {
+                age = stoi(data);
+                count = 0;
+                addInstructor(rating, name, age);
+            }
+        }
+        cout << "\nInstructors have been added to the OSU database\n\n";
+
+        // save instructor file list
+        ofstream outFile;
+
+        // request output file name for each paragraph
+        cout << "\nEnter a file name to save instructor data (i.e. updated_instructors.txt):\n";
+        cout << ">> ";
+        cin >> outFileName;
+
+        // create/overwrite output file object
+        outFile.open(outFileName);
+
+        // output instructor info to file
+        for (int instructor = 0; instructor < person.size(); instructor++) {
+            if (dynamic_cast<Instructor*>(getPersonPointer(instructor))) {
+                outFile << getPersonPointer(instructor)->getName() << endl;
+                outFile << fixed << setprecision(1) << getPersonPointer(instructor)->getRating() << endl;
+                outFile << getPersonPointer(instructor)->getAge() << endl;
+            }
+        }
+
+        // close output file
+        outFile.close();
+    }
+    else if (selection == 4) {
+        // exit to main menu
+
+
+    }
+    else {
+        cout << "Unable to determine file to read!\n";
+    }
+}
 
 /*********************************************************************
 ** Description:     returns a random number from 0 to a max value
